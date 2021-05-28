@@ -1,0 +1,29 @@
+@font-face {
+    font-family: "flaticon";
+    src: url("./../fonts/custom/flaticon.ttf?8150be10d9c6258386b49f9d2108d503") format("truetype"),
+    url("./../fonts/custom/flaticon.woff?8150be10d9c6258386b49f9d2108d503") format("woff"),
+    url("./../fonts/custom/flaticon.woff2?8150be10d9c6258386b49f9d2108d503") format("woff2"),
+    url("./../fonts/custom/flaticon.eot?8150be10d9c6258386b49f9d2108d503#iefix") format("embedded-opentype"),
+    url("./../fonts/custom/flaticon.svg?8150be10d9c6258386b49f9d2108d503#flaticon") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.flaticon-running:before {
+    content: "\f101";
+}
+.flaticon-rice:before {
+    content: "\f102";
+}
+.flaticon-calories:before {
+    content: "\f103";
+}

@@ -1,0 +1,39 @@
+[
+    {
+        "name": "Dashboard",
+        "roles": [
+            "Super Admin",
+            "Admin",
+            "User"
+        ]
+    },
+    {
+        "name": "My Profile",
+        "roles": [
+            "Super Admin",
+            "Admin",
+            "User"
+        ]
+    },
+    {
+        "name": "Cms",
+        "roles": [
+            "Super Admin",
+            "Admin"
+        ]
+    },
+    {
+        "name": "User Controls",
+        "roles": [
+            "Super Admin",
+            "Admin"
+        ]
+    },
+    {
+        "name": "App Settings",
+        "roles": [
+            "Super Admin",
+            "Admin"
+        ]
+    }
+]

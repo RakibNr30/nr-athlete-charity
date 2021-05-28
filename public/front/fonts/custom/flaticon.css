@@ -1,0 +1,29 @@
+@font-face {
+    font-family: "flaticon";
+    src: url("./flaticon.ttf?e0390628f061fb60d96b93fef4f9c826") format("truetype"),
+url("./flaticon.woff?e0390628f061fb60d96b93fef4f9c826") format("woff"),
+url("./flaticon.woff2?e0390628f061fb60d96b93fef4f9c826") format("woff2"),
+url("./flaticon.eot?e0390628f061fb60d96b93fef4f9c826#iefix") format("embedded-opentype"),
+url("./flaticon.svg?e0390628f061fb60d96b93fef4f9c826#flaticon") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.flaticon-rice-bowl:before {
+    content: "\f1012";
+}
+.flaticon-rice:before {
+    content: "\f1013";
+}
+.flaticon-calories:before {
+    content: "\f1014";
+}

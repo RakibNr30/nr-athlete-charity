@@ -1,0 +1,37 @@
+$flaticon-font: "flaticon";
+
+@font-face {
+    font-family: $flaticon-font;
+    src: url("./flaticon.ttf?15ea907024c2f5d7e827e7b8c4da541b") format("truetype"),
+url("./flaticon.woff?15ea907024c2f5d7e827e7b8c4da541b") format("woff"),
+url("./flaticon.woff2?15ea907024c2f5d7e827e7b8c4da541b") format("woff2"),
+url("./flaticon.eot?15ea907024c2f5d7e827e7b8c4da541b#iefix") format("embedded-opentype"),
+url("./flaticon.svg?15ea907024c2f5d7e827e7b8c4da541b#flaticon") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+$flaticon-map: (
+    "running": "\f101",
+    "rice": "\f102",
+    "calories": "\f103",
+);
+
+.flaticon-running:before {
+    content: map-get($flaticon-map, "running");
+}
+.flaticon-rice:before {
+    content: map-get($flaticon-map, "rice");
+}
+.flaticon-calories:before {
+    content: map-get($flaticon-map, "calories");
+}
