@@ -1,4 +1,4 @@
-<header id="top-menu" class="transparent-head pt-20 pb-20">
+<header id="top-menu" class="transparent-head">
     @php
     $user = \Modules\Ums\Entities\User::find(auth()->user() ? auth()->user()->id : null);
     @endphp
@@ -8,10 +8,10 @@
                 <div class="col-xl-2 col-lg-2 col-md-5 col-5">
                     <div class="logo">
                         <a class="logo-img" href="{{ route('front.index') }}">
-                            <img src="{{ $globalSite->logo->file_url ?? config('core.image.default.logo') }}" alt="">
+                            <img src="{{ $globalSite->logo->file_url ?? config('core.image.default.logo') }}" style="height: 47px" alt="">
                         </a>
                         <a class="logo-img-02 d-none" href="{{ route('front.index') }}">
-                            <img src="{{ $globalSite->logo_sticky->file_url ?? config('core.image.default.logo_sticky') }}" alt="">
+                            <img src="{{ $globalSite->logo_sticky->file_url ?? config('core.image.default.logo_sticky') }}" style="height: 47px;" alt="">
                         </a>
                     </div>
                 </div>

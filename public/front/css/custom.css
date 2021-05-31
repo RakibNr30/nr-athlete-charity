@@ -2,11 +2,11 @@ body {
 
 }
 .page-title-area {
-    min-height: 325px;
+    min-height: 300px;
 }
 @media only screen and (max-width: 767px){
     .page-title-area {
-        min-height: 250px;
+        min-height: 240px;
     }
 }
 .section-title h2 {
@@ -291,4 +291,53 @@ ul.widget-cat .active a {
 }
 .doante-select-area .theme_btn_bg:before {
     background: #012E83 !important;
+}
+.home.slider-area-02.black-bg {
+    background: #fff;
+}
+.home.slider-area-02.black-bg h5.sub-title {
+    color: #001234;
+}
+.home.slider-area-02.black-bg h1.main-title {
+    color: #001234;
+}
+.home.slider-area-02.black-bg h6.mini-title {
+    color: #001234;
+}
+.main-menu-02 ul li > a {
+    color: #001234;
+}
+.header-2-icon {
+    color: #001234;
+}
+#top-menu {
+    background: #f1f1f1;
+    opacity: 1;
+}
+.page-title-area::before {
+    opacity: 0;
+}
+.page-title-wrapper .page-title {
+    color: #001234;
+}
+ul.breadcrumb-list li a {
+    color: #001234;
+}
+.blog__thumb {
+    box-shadow: 0px 2px 0px 0px rgb(183 183 183 / 80%);
+}
+.widget-cat li a {
+    background: #fff;
+}
+.comment-form .input-area .form-control {
+    background: #fff;
+}
+.comment-form .input-area textarea {
+    background: #fff;
+}
+.cases-progress .progress {
+    background: #f4f2f1;
+}
+.cases-meta .cases-progress .progress {
+    background: #fff;
 }

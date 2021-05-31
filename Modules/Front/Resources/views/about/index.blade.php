@@ -24,6 +24,57 @@
             </div>
         </section>
         <!--page-title-area end-->
+        <!--counter-area start-->
+        <section class="home counter-area theme-bg pt-80 pb-30">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6">
+                        <div class="counetrs mb-30 text-center wow fadeInUp2  animated" data-wow-delay=".3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp2;">
+                            <div class="counetrs__icon mb-20"><i class="flaticon-running"></i></div>
+                            <h1>
+                                <span class="counter">
+                                    {{ $data->counter->totalAthlete ?? 0 }}
+                                </span>
+                            </h1>
+                            <p>Total Athlete</p>
+                        </div>
+                    </div>
+                    {{--<div class="col-xl-3 col-lg-3 col-md-3 col-sm-6">
+                        <div class="counetrs mb-30 text-center wow fadeInUp2  animated" data-wow-delay=".1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp2;">
+                            <div class="counetrs__icon mb-20"><i class="flaticon-calories"></i></div>
+                            <h1><span class="counter">0</span></h1>
+                            <p>Burn Calories</p>
+                        </div>
+                    </div>--}}
+                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6">
+                        <div class="counetrs mb-30 text-center wow fadeInUp2  animated" data-wow-delay=".7s" style="visibility: visible; animation-delay: 0.7s; animation-name: fadeInUp2;">
+                            {{--<div class="counetrs__icon mb-20"><i class="flaticon-dollar-coins"></i></div>--}}
+                            <div class="counetrs__icon mb-20"><i class="fas fa-coins"></i></div>
+                            <h1>
+                                &#128;
+                                <span class="counter">
+                                    {{ $data->counter->totalDonation ?? 0 }}
+                                </span>
+                            </h1>
+                            <p>Total Donation</p>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+                        <div class="counetrs mb-30 text-center wow fadeInUp2  animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp2;">
+                            <div class="counetrs__icon mb-20"><i class="flaticon-rice"></i></div>
+                            <h1>
+                                &#128;
+                                <span class="counter--">
+                                {{ $data->counter->latestRicePrice ?? 0 }}
+                            </span>
+                            </h1>
+                            <p>Rice Price (per kg)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--counter-area end-->
         <!--about-us-area start-->
         <section class="about-area pt-130 pb-70">
             <div class="container">
@@ -84,56 +135,6 @@
             </div>
         </section>
         <!--about-us-area end-->
-        <!--counter-area start-->
-        <section class="home counter-area theme-bg pt-130 pb-80">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6">
-                        <div class="counetrs mb-30 text-center wow fadeInUp2  animated" data-wow-delay=".3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp2;">
-                            <div class="counetrs__icon mb-20"><i class="flaticon-running"></i></div>
-                            <h1>
-                                <span class="counter">
-                                    {{ $data->counter->totalAthlete ?? 0 }}
-                                </span>
-                            </h1>
-                            <p>Total Athlete</p>
-                        </div>
-                    </div>
-                    {{--<div class="col-xl-3 col-lg-3 col-md-3 col-sm-6">
-                        <div class="counetrs mb-30 text-center wow fadeInUp2  animated" data-wow-delay=".1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp2;">
-                            <div class="counetrs__icon mb-20"><i class="flaticon-calories"></i></div>
-                            <h1><span class="counter">0</span></h1>
-                            <p>Burn Calories</p>
-                        </div>
-                    </div>--}}
-                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6">
-                        <div class="counetrs mb-30 text-center wow fadeInUp2  animated" data-wow-delay=".7s" style="visibility: visible; animation-delay: 0.7s; animation-name: fadeInUp2;">
-                            {{--<div class="counetrs__icon mb-20"><i class="flaticon-dollar-coins"></i></div>--}}
-                            <div class="counetrs__icon mb-20"><i class="fas fa-coins"></i></div>
-                            <h1>
-                                &#128;
-                                <span class="counter">
-                                    {{ $data->counter->totalDonation ?? 0 }}
-                                </span>
-                            </h1>
-                            <p>Total Donation</p>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
-                        <div class="counetrs mb-30 text-center wow fadeInUp2  animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp2;">
-                            <div class="counetrs__icon mb-20"><i class="flaticon-social-care-1"></i></div>
-                            <h1>
-                                <span class="counter">
-                                    {{ $data->counter->totalSavedPeople ?? 0 }}
-                                </span>
-                            </h1>
-                            <p>Saved People</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--counter-area end-->
 
         <!--testimonial-area start-->
         @if(count($data->testimonials))

@@ -24,7 +24,7 @@
             </div>
         </section>
 
-        <section class="blog-details-area pt-130 pb-70">
+        <section class="blog-details-area grey-bg2 pt-130 pb-70">
             <div class="container">
                 <div class="row">
                     <div class="col-xl-8 col-lg-8 col-md-12">
@@ -54,7 +54,7 @@
                     </div>
                     <div class="col-xl-4 col-lg-4 col-md-12">
                         <div class="standard-right-area">
-                            <div class="widget grey-bg2 mb-30 wow fadeInUp2  animated" data-wow-delay=".1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp2;">
+                            <div class="widget white-bg mb-30 wow fadeInUp2 animated" data-wow-delay=".1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp2;">
                                 <div class="widget-post widget-post-02">
                                     <h3 class="cases-title mb-20">Recent News</h3>
                                     @if(count($data->news))

@@ -25,7 +25,7 @@
         </section>
         <!--page-title-area end-->
         <!--join-team-area start-->
-        <section class="contacts-details-area pt-130 pb-100">
+        <section class="contacts-details-area grey-bg2 pt-130 pb-100">
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-xl-5 col-lg-6 col-md-6">

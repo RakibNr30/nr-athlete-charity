@@ -30,7 +30,7 @@
 <div class="navbar navbar-expand-md navbar-dark">
     <div class="navbar-brand">
         <a href="{{ route('front.index') }}" class="d-inline-block">
-            <img src="{{ asset('front/img/logo/header_logo_two.png') }}" alt="">
+            <img src="{{ $globalSite->logo->file_url ?? config('core.image.default.logo') }}" alt="">
         </a>
     </div>
 </div>

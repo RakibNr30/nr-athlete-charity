@@ -23,7 +23,7 @@
             </div>
         </section>
 
-        <section class="blog-details-area pt-130 pb-70">
+        <section class="blog-details-area grey-bg2 pt-130 pb-70">
             <div class="container">
                 <div class="row">
                     <div class="col-xl-3 col-lg-3 col-md-12">

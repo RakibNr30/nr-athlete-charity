@@ -26,7 +26,7 @@
         <!--page-title-area end-->
         @include('front.partials._alert_donate')
         <!--statistics-area start-->
-        <section class="home counter-area theme-bg pt-130 pb-80">
+        <section class="home counter-area theme-bg pt-80 pb-30">
             <div class="container">
                 <div class="row">
                     <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6">
@@ -62,13 +62,14 @@
                     </div>
                     <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
                         <div class="counetrs mb-30 text-center wow fadeInUp2  animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp2;">
-                            <div class="counetrs__icon mb-20"><i class="flaticon-social-care-1"></i></div>
+                            <div class="counetrs__icon mb-20"><i class="flaticon-rice"></i></div>
                             <h1>
-                                <span class="counter">
-                                    {{ $data->counter->totalSavedPeople ?? 0 }}
-                                </span>
+                                &#128;
+                                <span class="counter--">
+                                {{ $data->counter->latestRicePrice ?? 0 }}
+                            </span>
                             </h1>
-                            <p>Saved People</p>
+                            <p>Rice Price (per kg)</p>
                         </div>
                     </div>
                 </div>

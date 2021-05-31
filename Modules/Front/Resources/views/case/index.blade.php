@@ -23,13 +23,13 @@
             </div>
         </section>
 
-        <section class="cases-area pt-130 pb-100">
+        <section class="cases-area grey-bg2 pt-130 pb-100">
             @if(count($data->cases))
                 <div class="container">
                     <div class="row">
                         @foreach($data->cases as $index => $case)
                             <div class="col-xl-6 col-lg-6 col-md-6">
-                                <div class="cases cases-04 grey-bg2 d-xl-flex align-items-center mb-30 wow fadeInUp2  animated" data-wow-delay=".2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp2;">
+                                <div class="cases cases-04 white-bg d-xl-flex align-items-center mb-30 wow fadeInUp2  animated" data-wow-delay=".2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp2;">
                                     <div class="cases__box pos-rel">
                                         <div class="cases__image" style="background-image: url({{ $case->image->file_url ?? config('core.image.default.preview_image') }})">
 
@@ -63,7 +63,7 @@
                                                 {!! $case->description ?? '' !!}
                                             @endif
                                         </p>
-                                        <a class="theme_btn theme_btn3 theme_btn_bg_02" href="{{ route('front.donate.index', ['case' => $case->id]) }}">
+                                        <a class="theme_btn mt-2" href="{{ route('front.donate.index', ['case' => $case->id]) }}">
                                             donate <span><i class="fas fa-check"></i></span></a>
                                     </div>
                                 </div>

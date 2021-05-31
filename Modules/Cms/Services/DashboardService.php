@@ -51,6 +51,10 @@ class DashboardService
             ->where('status', 1)
             ->sum('affected_people');
 
+        // total saved people
+        $counter->latestRicePrice = $this->riceRepository->model
+            ->latest()->first('global_avg_price')->global_avg_price;
+
         return $counter;
     }
 

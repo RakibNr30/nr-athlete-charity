@@ -62,54 +62,55 @@
         @endif
 
         <!--statistics-area start-->
-        <section class="home counter-area theme-bg pt-130 pb-80">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6">
-                            <div class="counetrs mb-30 text-center wow fadeInUp2  animated" data-wow-delay=".3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp2;">
-                                <div class="counetrs__icon mb-20"><i class="flaticon-running"></i></div>
-                                <h1>
-                                <span class="counter">
-                                    {{ $data->counter->totalAthlete ?? 0 }}
-                                </span>
-                                </h1>
-                                <p>Total Athlete</p>
-                            </div>
+        <section class="home counter-area theme-bg pt-80 pb-30">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6">
+                        <div class="counetrs mb-30 text-center wow fadeInUp2  animated" data-wow-delay=".3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp2;">
+                            <div class="counetrs__icon mb-20"><i class="flaticon-running"></i></div>
+                            <h1>
+                            <span class="counter">
+                                {{ $data->counter->totalAthlete ?? 0 }}
+                            </span>
+                            </h1>
+                            <p>Total Athlete</p>
                         </div>
-                        {{--<div class="col-xl-3 col-lg-3 col-md-3 col-sm-6">
-                            <div class="counetrs mb-30 text-center wow fadeInUp2  animated" data-wow-delay=".1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp2;">
-                                <div class="counetrs__icon mb-20"><i class="flaticon-calories"></i></div>
-                                <h1><span class="counter">0</span></h1>
-                                <p>Burn Calories</p>
-                            </div>
-                        </div>--}}
-                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6">
-                            <div class="counetrs mb-30 text-center wow fadeInUp2  animated" data-wow-delay=".7s" style="visibility: visible; animation-delay: 0.7s; animation-name: fadeInUp2;">
-                                {{--<div class="counetrs__icon mb-20"><i class="flaticon-dollar-coins"></i></div>--}}
-                                <div class="counetrs__icon mb-20"><i class="fas fa-coins"></i></div>
-                                <h1>
-                                    &#128;
-                                    <span class="counter">
-                                    {{ $data->counter->totalDonation ?? 0 }}
-                                </span>
-                                </h1>
-                                <p>Total Donation</p>
-                            </div>
+                    </div>
+                    {{--<div class="col-xl-3 col-lg-3 col-md-3 col-sm-6">
+                        <div class="counetrs mb-30 text-center wow fadeInUp2  animated" data-wow-delay=".1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp2;">
+                            <div class="counetrs__icon mb-20"><i class="flaticon-calories"></i></div>
+                            <h1><span class="counter">0</span></h1>
+                            <p>Burn Calories</p>
                         </div>
-                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
-                            <div class="counetrs mb-30 text-center wow fadeInUp2  animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp2;">
-                                <div class="counetrs__icon mb-20"><i class="flaticon-social-care-1"></i></div>
-                                <h1>
+                    </div>--}}
+                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6">
+                        <div class="counetrs mb-30 text-center wow fadeInUp2  animated" data-wow-delay=".7s" style="visibility: visible; animation-delay: 0.7s; animation-name: fadeInUp2;">
+                            {{--<div class="counetrs__icon mb-20"><i class="flaticon-dollar-coins"></i></div>--}}
+                            <div class="counetrs__icon mb-20"><i class="fas fa-coins"></i></div>
+                            <h1>
+                                &#128;
                                 <span class="counter">
-                                    {{ $data->counter->totalSavedPeople ?? 0 }}
-                                </span>
-                                </h1>
-                                <p>Saved People</p>
-                            </div>
+                                {{ $data->counter->totalDonation ?? 0 }}
+                            </span>
+                            </h1>
+                            <p>Total Donation</p>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+                        <div class="counetrs mb-30 text-center wow fadeInUp2  animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp2;">
+                            <div class="counetrs__icon mb-20"><i class="flaticon-rice"></i></div>
+                            <h1>
+                            &#128;
+                            <span class="counter--">
+                                {{ $data->counter->latestRicePrice ?? 0 }}
+                            </span>
+                            </h1>
+                            <p>Rice Price (per kg)</p>
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
         <!--statistics-area end-->
 
         @if(count($data->cases))
@@ -128,7 +129,7 @@
                 </div>
                 <div class="row">
                     @foreach($data->cases as $index => $case)
-                        <div class="col-xl-3 col-lg-6 col-md-6">
+                        <div class="col-xl-3 col-lg-6 col-md-6 m-auto">
                         <div class="cases white-bg mb-30 wow fadeInUp2 animated" data-wow-delay='.2s'>
                             <div class="cases__box pos-rel">
                                 <div class="cases__box--img" style="height: 200px;">
@@ -219,7 +220,7 @@
         @endif
 
         @if(count($data->news))
-            <section class="home blog-area pt-100 pb-100">
+            <section class="home blog-area bg-white pt-100 pb-100">
             <div class="container">
                 <div class="row">
                     <div class="col-xl-6 offset-xl-3">

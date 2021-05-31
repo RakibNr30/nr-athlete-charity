@@ -42,7 +42,7 @@
                                             </div>
                                             <div id="collapse{{ $index }}" class="collapse show" aria-labelledby="heading{{ $index }}" data-parent="#accordion">
                                                 <div class="card-body mb-10">
-                                                    {{ $faq->answer }}
+                                                    {!! $faq->answer !!}
                                                 </div>
                                             </div>
                                         </div>

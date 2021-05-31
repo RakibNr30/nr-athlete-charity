@@ -25,7 +25,7 @@
         </section>
         <!--page-title-area end-->
         <!--team-area start-->
-        <section class="team-area-02 pt-130 pb-60">
+        <section class="team-area-02 grey-bg2 pt-130 pb-60">
             <div class="container">
                 <div class="row">
                     @if(count($data->teamMembers))
@@ -54,7 +54,10 @@
                             </div>
                         @endforeach
                     @else
-                        <h6 class="w-100 text-center">No member available</h6>
+                        <h6 class="text-center w-100">
+                            <i class="fa fa-exclamation-circle d-block"></i>
+                            No member found
+                        </h6>
                     @endif
                 </div>
             </div>

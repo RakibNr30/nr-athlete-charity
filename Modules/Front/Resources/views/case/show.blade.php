@@ -24,7 +24,7 @@
             </div>
         </section>
 
-        <section class="cases-details-area pt-125">
+        <section class="cases-details-area grey-bg2 pt-125">
             <div class="container">
                 <div class="row">
                     <div class="col-xl-8 col-lg-8 col-md-12">
@@ -66,7 +66,7 @@
                     </div>
                     <div class="col-xl-4 col-lg-4 col-md-12">
                         <div class="details-right-area">
-                            <div class="widget grey-bg2 mb-30">
+                            <div class="widget white-bg mb-30">
                                 <div class="widget-post">
                                     <h3 class="cases-title mb-30">Popular Cases</h3>
                                     @if(count($data->cases))

@@ -77,7 +77,7 @@ class DonationController extends Controller
 
         $activities = $this->strava->activities($user->access_token);
         if (count($activities)) {
-            $lastActivity = $activities[count($activities) - 1];
+            $lastActivity = $activities[0];
             $lastActivity = $this->strava->activity($user->access_token, $lastActivity->id);
         }
 
