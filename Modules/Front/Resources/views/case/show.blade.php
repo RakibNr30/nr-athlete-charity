@@ -36,6 +36,12 @@
                                             {{ $case->title ?? '' }}
                                         </a>
                                     </h2>
+                                    <div class="cases--author d-flex align-items-center mb-25">
+                                        <h4 class="semi-02-title">
+                                            <i class="fa fa-map-marker-alt mr-1 color-primary"></i>
+                                            {{ $case->area->country_name ?? '' }}
+                                        </h4>
+                                    </div>
                                     <div class="cases-meta d-sm-flex justify-content-between">
                                         <div class="cases-progress mb-60">
                                             <h4 class="funding semi-02-title">Raised <span>&#128;{{ $case->donations->sum('donate_amount') ?? 0 }}</span></h4>

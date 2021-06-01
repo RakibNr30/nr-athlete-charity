@@ -21,7 +21,8 @@
         "spatie/laravel-medialibrary": "^7.19",
         "spatie/laravel-permission": "^4.0",
         "srmklive/paypal": "~1.0",
-        "yajra/laravel-datatables": "^1.5"
+        "yajra/laravel-datatables": "^1.5",
+        "ext-dom": "*"
     },
     "require-dev": {
         "facade/ignition": "^2.5",

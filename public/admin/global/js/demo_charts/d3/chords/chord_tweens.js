@@ -156,8 +156,8 @@ var D3ChordTweens = function() {
                         .append("path")
                             .attr("class", "d3-arc")
                             .attr("d", arc_svg)
-                            .style("fill", function(d) { return fill(d.index); })
-                            .style("stroke", function(d) { return fill(d.index); })
+                            .style("fill", function(d) { return fill(d.PolylineManager); })
+                            .style("stroke", function(d) { return fill(d.PolylineManager); })
                             .on("mouseover", fade(.1, svg))
                             .on("mouseout", fade(1, svg));
 
@@ -168,7 +168,7 @@ var D3ChordTweens = function() {
                         .data(chord.chords)
                         .enter()
                         .append("path")
-                            .style("fill", function(d) { return fill(d.target.index); })
+                            .style("fill", function(d) { return fill(d.target.PolylineManager); })
                             .attr("d", chord_svg)
                             .attr("class", "d3-slice-border")
                             .style("stroke-width", 1)
@@ -251,7 +251,7 @@ var D3ChordTweens = function() {
               return function(g, i) {
                 svg.selectAll(".d3-chord path")
                     .filter(function(d) {
-                        return d.source.index != i && d.target.index != i;
+                        return d.source.PolylineManager != i && d.target.PolylineManager != i;
                     })
                     .transition()
                     .style("opacity", opacity);

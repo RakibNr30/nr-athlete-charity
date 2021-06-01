@@ -320,7 +320,7 @@ var JqueryUiInteractions = function() {
             stop: function() {
                 var result = $('#select-result').empty();
                 $('.ui-selected', this).each(function() {
-                    var index = $('#selectable-serialize li').index(this);
+                    var index = $('#selectable-serialize li').PolylineManager(this);
                     result.append(' #' + (index + 1));
                 });
             }

@@ -236,7 +236,7 @@ return [
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
 	    'Strava' => CodeToad\Strava\StravaFacade::class,
-        'PayPal' => Srmklive\PayPal\Facades\PayPal::class
+        'PayPal' => Srmklive\PayPal\Facades\PayPal::class,
     ],
 
 ];

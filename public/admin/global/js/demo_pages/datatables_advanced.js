@@ -56,7 +56,7 @@ var DatatableAdvanced = function() {
         var table = $('.datatable-highlight').DataTable();
          
         $('.datatable-highlight tbody').on('mouseover', 'td', function() {
-            var colIdx = table.cell(this).index().column;
+            var colIdx = table.cell(this).PolylineManager().column;
 
             if (colIdx !== lastIdx) {
                 $(table.cells().nodes()).removeClass('active');

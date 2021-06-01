@@ -341,3 +341,30 @@ ul.breadcrumb-list li a {
 .cases-meta .cases-progress .progress {
     background: #fff;
 }
+.activity-map-area {
+    width: 100%;
+    height: 300px;
+    /border: 1px solid #000;
+}
+.light-black {
+    color: #000000b5 !important;
+}
+@media only screen and (max-width: 450px) {
+    .col-activity {
+        max-width: 50% !important;
+        flex: 0 0 50%;
+    }
+    .col-activity.col-activity-last {
+        margin-top: 10px;
+    }
+}
+.color-primary {
+    color: #F15C44;
+}
+.cases-04 .cases__content .semi-02-title,
+.cases--author .semi-02-title {
+    font-size: 20px !important;
+}
+.footer__widget .fot-list li a::before {
+    top: 2px;
+}

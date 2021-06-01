@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    function cc_format(value) {
+    /*function cc_format(value) {
         var v = value.replace(/\s+/g, '').replace(/[^0-9]/gi, '')
         var matches = v.match(/\d{4,16}/g);
         var match = matches && matches[0] || ''
@@ -27,7 +27,7 @@ $(document).ready(function () {
         }
 
         return true;
-    }
+    }*/
 
     $('.profile-link').hover(function() {
         $('.profile-link .profile-dropdown').fadeIn(300);

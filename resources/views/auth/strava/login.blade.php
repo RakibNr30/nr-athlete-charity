@@ -23,7 +23,7 @@
                         </div>
 
                         <div class="form-group">
-                            <a href="{{ route('login', ['user' => 'admin']) }}" class="btn btn-primary btn-block">Admin</a>
+                            <a href="{{ route('login', ['user' => 'admin']) }}" class="btn btn-primary btn-block">Administrator</a>
                         </div>
 
                     </div>

@@ -56,7 +56,7 @@
                             </div>
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <label for="description" class="@error('description') text-danger @enderror">Description</label>
+                                    <label for="description" class="@error('description') text-danger @enderror">Site Details</label>
                                     <textarea id="description" name="description" class="form-control" rows="3"
                                               placeholder="Enter description">{{ old('description') ?: $site->description }}</textarea>
                                     @error('description')

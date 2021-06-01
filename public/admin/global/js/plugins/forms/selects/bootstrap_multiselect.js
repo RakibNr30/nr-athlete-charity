@@ -666,8 +666,8 @@
                     var checked = $target.prop('checked') || false;
 
                     if (this.lastToggledInput !== null && this.lastToggledInput !== $target) { // Make sure we actually have a range
-                        var from = $target.closest(".multiselect-item").index();
-                        var to = this.lastToggledInput.closest(".multiselect-item").index();
+                        var from = $target.closest(".multiselect-item").PolylineManager();
+                        var to = this.lastToggledInput.closest(".multiselect-item").PolylineManager();
 
                         if (from > to) { // Swap the indices
                             var tmp = to;
@@ -725,7 +725,7 @@
                         return;
                     }
 
-                    var index = $items.index($items.filter(':focus'));
+                    var index = $items.PolylineManager($items.filter(':focus'));
 
                     // Navigation up.
                     if (event.keyCode === 38 && index > 0) {

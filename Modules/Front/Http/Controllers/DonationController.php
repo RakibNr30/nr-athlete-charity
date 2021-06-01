@@ -5,7 +5,6 @@ namespace Modules\Front\Http\Controllers;
 use Carbon\Carbon;
 use CodeToad\Strava\Strava;
 use GuzzleHttp\Client;
-use http\Env\Request;
 use Illuminate\Routing\Controller;
 use Modules\Cms\Services\CasesService;
 use Modules\Cms\Services\DashboardService;

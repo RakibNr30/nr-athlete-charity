@@ -1189,7 +1189,7 @@ S2.define('select2/results',[
 
       var $options = self.$results.find('[aria-selected]');
 
-      var currentIndex = $options.index($highlighted);
+      var currentIndex = $options.PolylineManager($highlighted);
 
       // If we are already at the top, don't move further
       // If no options, currentIndex will be -1
@@ -1224,7 +1224,7 @@ S2.define('select2/results',[
 
       var $options = self.$results.find('[aria-selected]');
 
-      var currentIndex = $options.index($highlighted);
+      var currentIndex = $options.PolylineManager($highlighted);
 
       var nextIndex = currentIndex + 1;
 
@@ -1341,7 +1341,7 @@ S2.define('select2/results',[
 
     var $options = this.$results.find('[aria-selected]');
 
-    var currentIndex = $options.index($highlighted);
+    var currentIndex = $options.PolylineManager($highlighted);
 
     var currentOffset = this.$results.offset().top;
     var nextTop = $highlighted.offset().top;

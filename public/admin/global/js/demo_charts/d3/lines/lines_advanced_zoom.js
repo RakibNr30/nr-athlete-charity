@@ -197,7 +197,7 @@ var D3PanZoom = function() {
                         return "translate(" + x(d.point.x) + "," + y(d.point.y) + ")"; }
                     )
                     .style('stroke', function(d,i){  
-                        return colors[d.index%colors.length];
+                        return colors[d.PolylineManager%colors.length];
                     })  
                     .style("cursor", "pointer");
 

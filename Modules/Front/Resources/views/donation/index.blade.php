@@ -24,8 +24,8 @@
             </div>
         </section>
         <!--page-title-area end-->
-        @include('front.partials._alert_donate')
-        <!--statistics-area start-->
+    @include('front.partials._alert_donate')
+    <!--statistics-area start-->
         <section class="home counter-area theme-bg pt-80 pb-30">
             <div class="container">
                 <div class="row">
@@ -86,33 +86,59 @@
                             <div class="doante-select-area donate-select-area-04 mb-30 text-center white-bg wow fadeInUp2 animated" data-wow-delay=".1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp2;">
                                 <div class="row">
                                     <div class="col-12">
-                                        <h3>Your Last Activity</h3>
+                                        <h3 class="mb-20 text-left">Your Last Activity</h3>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-12">
-                                        <div class="counetrs pos-rel mb-0 grey-bg2 animated mb-2 mt-2 p-2">
-                                            <p class="text-black-50 text-left">Name: <span class="font-weight-bold">{{ $lastActivity->name ?? 'N/A' }}</span></p>
-                                            <p class="text-black-50 text-left">Distance:
-                                                <span class="font-weight-bold">
-                                                    @if(isset($lastActivity->distance))
-                                                        {{ $lastActivity->distance ? round($lastActivity->distance/1000, 2) : 0 }} KM
-                                                    @else
-                                                        0
-                                                    @endif
-                                                </span>
-                                            </p>
-                                            <p class="text-black-50 text-left">Elapsed Time:
-                                                <span class="font-weight-bold">
-                                                    @if(isset($lastActivity->elapsed_time))
-                                                        {{ $lastActivity->elapsed_time ? round($lastActivity->elapsed_time/60, 2) : 0 }} M
-                                                    @else
-                                                        0
-                                                    @endif
-                                                </span>
-                                            </p>
+                                        <div class="counetrs pos-rel mb-0 grey-bg2 animated mb-2 mt-2 p-2 pb-3">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <p class="text-black-50 text-left">
+                                                        <span class="font-weight-bold light-black" style="font-size: 18px;">{{ $lastActivity->name ?? 'N/A' }}</span>
+                                                    </p>
+                                                </div>
+                                                <div class="col-4 col-activity">
+                                                    <p class="text-black-50 text-left light-black" style="font-size: 12px">Distance
+                                                        <span class="font-weight-bold d-block" style="font-size: 18px; line-height: 8px">
+                                                            @if(isset($lastActivity->distance))
+                                                                {{ $lastActivity->distance ?? 0 }} m
+                                                            @else
+                                                                0
+                                                            @endif
+                                                        </span>
+                                                    </p>
+                                                </div>
+                                                <div class="col-4 col-activity">
+                                                    <p class="text-black-50 text-left light-black" style="font-size: 12px">Time
+                                                        <span class="font-weight-bold d-block" style="font-size: 18px; line-height: 8px">
+                                                            @if(isset($lastActivity->moving_time))
+                                                                {{ $lastActivity->moving_time ?? 0 }} s
+                                                            @else
+                                                                0
+                                                            @endif
+                                                        </span>
+                                                    </p>
+                                                </div>
+                                                <div class="col-4 col-activity col-activity-last">
+                                                    <p class="text-black-50 text-left light-black" style="font-size: 12px">Speed
+                                                        <span class="font-weight-bold d-block" style="font-size: 18px; line-height: 8px">
+                                                            @if(isset($lastActivity->average_speed))
+                                                                {{ $lastActivity->average_speed ?? 0 }} m/s
+                                                            @else
+                                                                0
+                                                            @endif
+                                                        </span>
+                                                    </p>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
+                                    @if(isset($lastActivity->map->summary_polyline))
+                                        <div class="activity-map-area mb-2 ml-3 mr-3">
+                                            <div id="map"></div>
+                                        </div>
+                                    @endif
                                     <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
                                         <div class="counetrs statistics pos-rel mb-0 grey-bg2 text-center wow fadeInUp2 animated" data-wow-delay=".2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp2;">
                                             <div class="counetrs__icon mb-20"><i class="flaticon-calories"></i></div>
@@ -197,7 +223,7 @@
                                             <div class="post d-flex align-items-center mb-20">
                                                 <div class="post__thumb mr-20">
                                                     <div class="latest_thumb" style="background-image:
-                                                            url({{ $case->image->file_url ?? config('core.image.default.preview_image') }})">
+                                                        url({{ $case->image->file_url ?? config('core.image.default.preview_image') }})">
                                                     </div>
                                                 </div>
                                                 <div class="post__content">
@@ -236,8 +262,11 @@
 @stop
 
 @section('style')
+    <link href="{{ asset('common/plugins/leaflet/css/leaflet.css') }}" rel="stylesheet">
+    <link href="{{ asset('common/plugins/leaflet/css/leaflet.pm.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('common/plugins/select2/css/select2.min.css') }}">
     <style>
+        #map { height: 100%; width:100%; }
         .donate-select-area-04 {
             padding: 30px 30px 30px 30px;
         }
@@ -267,8 +296,149 @@
 @stop
 
 @section('script')
+    <script src="{{ asset('common/plugins/leaflet/js/leaflet.js') }}"></script>
+    <script src="{{ asset('common/plugins/leaflet/js/leaflet.pm.min.js') }}"></script>
+    <script src="{{ asset('common/plugins/leaflet/js/polyline.js') }}"></script>
     <script src="{{ asset('common/plugins/select2/js/select2.full.min.js') }}"></script>
     <script>
         $('.donate-select2').select2();
+    </script>
+    <script>
+        function setupMap() {
+            var map = L
+                .map('map')
+                .setView([0, 90], 2);
+
+            L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+                attribution: 'Map data &copy; <a href="http://mapbox.com">Mapbox</a>',
+                maxZoom: 20,
+                id: 'mapbox/streets-v11',
+                accessToken: 'pk.eyJ1IjoicmFraWJucjMwIiwiYSI6ImNrcGQ2cHZkejA5cXMyb3Q2enV0azFzZnEifQ.eh9EyKO8cga0v7usw-GacQ'
+            }).addTo(map);
+
+            map.pm.addControls({
+                position: 'topleft',
+                drawMarker: false,
+                drawPolyline: true,
+                drawRectangle: false,
+                drawPolygon: false,
+                drawCircle: false,
+                cutPolygon: false,
+                editMode: true,
+                removalMode: true,
+            });
+
+            map.pm.setPathOptions({
+                color: 'blue',
+                width: 4,
+            });
+
+            return map;
+        }
+
+        var io = document.getElementById('io');
+        //var errOut = document.getElementById('error');
+        var map = setupMap();
+        var curPolyline = [];
+        var curMapboxPolyline = null;
+        var curInputMode = 0;
+        var data = '{{ $lastActivity->map->summary_polyline ?? '' }}';
+
+        function disableDrawLine() {
+            map.pm.addControls({
+                drawPolyline: false,
+            });
+        }
+
+        function enableDrawLine() {
+            map.pm.addControls({
+                drawPolyline: true,
+            });
+        }
+
+        function syncPolyline() {
+            if (curMapboxPolyline) {
+                curPolyline = curMapboxPolyline.getLatLngs().map(function(item) {
+                    return [item.lat, item.lng];
+                });
+            } else {
+                curPolyline = [];
+            }
+        }
+
+        function onPmEdit() {
+            syncPolyline();
+            render();
+        }
+
+        function onPmCreate(e) {
+            curMapboxPolyline = e.layer;
+            curMapboxPolyline.on('pm:edit', onPmEdit);
+            disableDrawLine();
+            syncPolyline();
+            render();
+        }
+
+        function onPmRemove(e) {
+            curMapboxPolyline.off('pm:edit', onPmEdit);
+            curMapboxPolyline = null;
+            enableDrawLine();
+            syncPolyline();
+            render();
+        }
+
+        function onInput() {
+            const val = data;
+            if (val === '') {
+                if (curMapboxPolyline) {
+                    map.removeLayer(curMapboxPolyline);
+                }
+                enableDrawLine();
+            } else {
+                try {
+                    curPolyline = polyline.decode(val);
+                    if (!curMapboxPolyline) {
+                        curMapboxPolyline = L.polyline(curPolyline, {
+                            color: '#F15C44',
+                            weight: 4,
+                        }).addTo(map);
+                        curMapboxPolyline.on('pm:edit', onPmEdit);
+                        map.fitBounds(curMapboxPolyline.getBounds());
+                        disableDrawLine();
+                    } else {
+                        curMapboxPolyline.setLatLngs(curPolyline.map(item => {
+                            return new L.LatLng(item[0], item[1]);
+                        }));
+                        map.fitBounds(curMapboxPolyline.getBounds());
+                    }
+                    //errOut.innerHTML = '';
+                } catch (err) {
+                    //errOut.innerHTML = err.message;
+                }
+            }
+        }
+
+        map.on('pm:create', onPmCreate);
+        map.on('pm:remove', onPmRemove);
+        onInput();
+
+        function setCurPolyline(encp) {
+            curInputMode = 0;
+            onInput({
+                target: {
+                    value: encp,
+                },
+            });
+            render();
+            return false;
+        }
+
+        function setDisplay(str) {
+            const selectionStart = io.selectionStart;
+            const selectionEnd = io.selectionEnd;
+            console.log(selectionStart, selectionEnd);
+            io.value = str;
+            io.setSelectionRange(selectionStart, selectionEnd);
+        }
     </script>
 @stop

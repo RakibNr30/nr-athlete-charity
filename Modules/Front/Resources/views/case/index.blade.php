@@ -36,6 +36,10 @@
                                         </div>
                                     </div>
                                     <div class="cases__content">
+                                        <h4 class="semi-02-title">
+                                            <i class="fa fa-map-marker-alt mr-1 color-primary"></i>
+                                            {{ $case->area->country_name ?? '' }}
+                                        </h4>
                                         <h3>
                                             <a href="{{ route('front.cases.show', [$case->slug]) }}">
                                                 @if(strlen($case->title) > 30)
