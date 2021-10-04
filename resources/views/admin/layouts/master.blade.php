@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ app()->getLocale() }}">
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 <head>
     <meta charset="utf-8">
@@ -9,7 +9,6 @@
     <link rel="shortcut icon" type="image/x-icon" href="{{ $globalSite->favicon->file_url ?? config('core.image.default.favicon') }}">
     <!-- Global stylesheets -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css">
-    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
     <link href="{{ asset('admin/global/css/icons/icomoon/styles.min.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('admin/global/css/icons/fontawesome/styles.min.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('admin/global/css/icons/material/styles.min.css') }}" rel="stylesheet" type="text/css">

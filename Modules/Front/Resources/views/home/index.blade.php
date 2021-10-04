@@ -1,4 +1,4 @@
-@extends('front.layouts.master')
+@extends('front.layouts.master', ['active' => [0, 0]])
 
 @section('title')
 @stop
@@ -6,7 +6,7 @@
 @section('content')
     <main>
         @if(isset($data->banner))
-            <div class="home slider-area-02 black-bg pos-rel">
+            <div class="home slider-area-02 black-bg light-red-bg pos-rel">
                 <div class="slider-img__shape">
                     <img src="{{ asset('front/img/shape/05.png') }}" alt="">
                 </div>
@@ -73,7 +73,7 @@
                                 {{ $data->counter->totalAthlete ?? 0 }}
                             </span>
                             </h1>
-                            <p>Total Athlete</p>
+                            <p>{{ __('front/home/index.total_athlete') }}</p>
                         </div>
                     </div>
                     {{--<div class="col-xl-3 col-lg-3 col-md-3 col-sm-6">
@@ -93,7 +93,7 @@
                                 {{ $data->counter->totalDonation ?? 0 }}
                             </span>
                             </h1>
-                            <p>Total Donation</p>
+                            <p>{{ __('front/home/index.total_donation') }}</p>
                         </div>
                     </div>
                     <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
@@ -105,7 +105,7 @@
                                 {{ $data->counter->latestRicePrice ?? 0 }}
                             </span>
                             </h1>
-                            <p>Rice Price (per kg)</p>
+                            <p>{{ __('front/home/index.rice_price') }}</p>
                         </div>
                     </div>
                 </div>
@@ -120,9 +120,11 @@
                     <div class="col-xl-8 offset-xl-2">
                         <div class="section-title text-center mb-75 pl-50 pr-50 wow fadeInUp2 animated"
                              data-wow-delay='.1s'>
-                            <h6>Popular Cases</h6> | <a href="{{ route('front.cases.index') }}">View All</a>
+                            <h6>{{ __('front/home/index.popular_cases') }}</h6> | <a href="{{ route('front.cases.index') }}">
+                                {{ __('front/home/index.view_all') }}
+                            </a>
                             <h2>
-                                Popular Charity Causes Around The World
+                                {{ __('front/home/index.popular_charity_causes_around_the_world') }}
                             </h2>
                         </div>
                     </div>
@@ -225,9 +227,9 @@
                 <div class="row">
                     <div class="col-xl-6 offset-xl-3">
                         <div class="section-title text-center mb-85  wow fadeInUp2  animated" data-wow-delay=".1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp2;">
-                            <h6>Latest News</h6> | <a href="{{ route('front.news.index') }}">View All</a>
+                            <h6>{{ __('front/home/index.latest_news') }}</h6> | <a href="{{ route('front.news.index') }}">{{ __('front/home/index.view_all') }}</a>
                             <h2>
-                                Get Our Every News &amp; Blog
+                                {{ __('front/home/index.get_our_every_news_and_blog') }}
                             </h2>
                         </div>
                     </div>
@@ -325,6 +327,11 @@
 @stop
 
 @section('style')
+    <style>
+        .home.slider-area-02.light-red-bg {
+             background: #ffd6d6 !important;
+        }
+    </style>
 @stop
 
 @section('script')

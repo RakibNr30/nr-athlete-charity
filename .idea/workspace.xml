@@ -2,92 +2,139 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="99c1769c-e3db-4f4b-bc23-fe1a08c1504e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/common/plugins/leaflet/css/leaflet.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/common/plugins/leaflet/css/leaflet.pm.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/common/plugins/leaflet/js/leaflet.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/common/plugins/leaflet/js/leaflet.pm.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/common/plugins/leaflet/js/polyline.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/cornford/googlmapper/circle.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/cornford/googlmapper/javascript.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/cornford/googlmapper/map.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/cornford/googlmapper/mapper.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/cornford/googlmapper/marker.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/cornford/googlmapper/overlay.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/cornford/googlmapper/polygon.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/cornford/googlmapper/polyline.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/cornford/googlmapper/rectangle.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/cornford/googlmapper/streetview.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/41c1918f-8d38-4c04-a2c1-a7ea66ef6cea.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/Modules/Cms/DataTables/PublicMessageDataTable.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Modules/Cms/Entities/PrivacyPolicy.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Modules/Cms/Entities/PublicMessage.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Modules/Cms/Http/Controllers/PrivacyPolicyController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Modules/Cms/Http/Controllers/PublicMessageController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Modules/Cms/Http/Requests/PrivacyPolicyUpdateRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Modules/Cms/Http/Requests/PublicMessageStoreRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Modules/Cms/Repositories/PrivacyPolicyRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Modules/Cms/Repositories/PublicMessageRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Modules/Cms/Resources/views/privacy-policy/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Modules/Cms/Resources/views/public-message/action.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Modules/Cms/Resources/views/public-message/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Modules/Cms/Resources/views/public-message/show.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Modules/Cms/Services/PrivacyPolicyService.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Modules/Cms/Services/PublicMessageService.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Modules/Front/Http/Controllers/PrivacyPolicyController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Modules/Front/Resources/views/privacy-policy/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Modules/Setting/Entities/Api.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Modules/Setting/Http/Controllers/ApiController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Modules/Setting/Http/Requests/ApiUpdateRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Modules/Setting/Repositories/ApiRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Modules/Setting/Resources/views/api/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Modules/Setting/Services/ApiService.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Middleware/LanguageMiddleware.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_apis_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_privacy_policies_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/fonts/NotoSansJP-Medium-92cd798e2d.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/fonts/NotoSansJP-Medium-9a7d4f3eb7.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/fonts/NotoSansJP-Regular-d5713c2d91.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/fonts/NotoSansJP-Regular-e37b998f0a.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/fonts/NotoSansKR-Medium-232de06c67.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/fonts/NotoSansKR-Medium-427656ed49.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/fonts/NotoSansKR-Medium-8faa956686.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/fonts/NotoSansKR-Regular-12ef6e41b0.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/fonts/NotoSansKR-Regular-81a7c1564e.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/fonts/NotoSansKR-Regular-b9dc40714e.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/fonts/dosis-regular-webfont-0801a2ca93 (1).woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/fonts/dosis-regular-webfont-0801a2ca93.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/fonts/dosis-regular-webfont-3a79314ad1 (1).ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/fonts/dosis-regular-webfont-3a79314ad1.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/fonts/dosis-regular-webfont-7926b94d6e (1).woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/fonts/dosis-regular-webfont-7926b94d6e.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/fonts/pt-sans-webfont-16c30b8d03.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/fonts/pt-sans-webfont-3b13838594.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/fonts/pt-sans-webfont-44fd9abb6e.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/fonts/pt-sans-webfont-italic-1ec0e7a655.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/fonts/pt-sans-webfont-italic-e32091d6de.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/fonts/pt-sans-webfont-italic-f8f129875f.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/front/images/logo/cards.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/lang/de/auth.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/lang/de/front/about/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/lang/de/front/contact/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/lang/de/front/donate/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/lang/de/front/faq/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/lang/de/front/footer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/lang/de/front/home/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/lang/de/front/master.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/lang/de/front/profile/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/lang/de/pagination.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/lang/de/passwords.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/lang/de/validation.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/lang/en/front/about/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/lang/en/front/contact/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/lang/en/front/donate/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/lang/en/front/faq/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/lang/en/front/footer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/lang/en/front/home/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/lang/en/front/master.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/lang/en/front/profile/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/seed/settings/settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/979ee3df-3803-4f2e-97d0-60b3ed7c3e43.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/979ee3df-3803-4f2e-97d0-60b3ed7c3e43.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/nr-athlete-charity.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/nr-athlete-charity.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.styleci.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.styleci.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modules/Cms/Resources/views/about/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/Cms/Resources/views/about/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modules/Cms/Routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/Cms/Routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modules/Cms/Services/DashboardService.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/Cms/Services/DashboardService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modules/Front/Http/Controllers/ContactController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/Front/Http/Controllers/ContactController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Modules/Front/Http/Controllers/DonationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/Front/Http/Controllers/DonationController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modules/Front/Resources/views/about/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/Front/Resources/views/about/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Modules/Front/Resources/views/case/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/Front/Resources/views/case/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Modules/Front/Resources/views/case/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/Front/Resources/views/case/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modules/Front/Resources/views/contact/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/Front/Resources/views/contact/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Modules/Front/Resources/views/donation/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/Front/Resources/views/donation/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Modules/Setting/Resources/views/contact/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/Setting/Resources/views/contact/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Modules/Setting/Resources/views/site/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/Setting/Resources/views/site/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modules/Front/Resources/views/faq/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/Front/Resources/views/faq/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modules/Front/Resources/views/home/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/Front/Resources/views/home/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modules/Front/Resources/views/news/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/Front/Resources/views/news/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modules/Front/Resources/views/news/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/Front/Resources/views/news/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modules/Front/Resources/views/profile/account-info/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/Front/Resources/views/profile/account-info/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modules/Front/Resources/views/profile/donation-history/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/Front/Resources/views/profile/donation-history/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modules/Front/Resources/views/profile/personal-info/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/Front/Resources/views/profile/personal-info/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modules/Front/Resources/views/team/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/Front/Resources/views/team/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modules/Front/Routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/Front/Routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modules/Setting/Database/Seeders/SettingDatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/Setting/Database/Seeders/SettingDatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modules/Setting/Routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/Setting/Routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/StravaAuthController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/StravaAuthController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PayPalPaymentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PayPalPaymentController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/admin/global/js/demo_charts/d3/bars/bars_advanced_hierarchical.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/admin/global/js/demo_charts/d3/bars/bars_advanced_hierarchical.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/admin/global/js/demo_charts/d3/chords/chord_arcs.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/admin/global/js/demo_charts/d3/chords/chord_arcs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/admin/global/js/demo_charts/d3/chords/chord_basic.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/admin/global/js/demo_charts/d3/chords/chord_basic.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/admin/global/js/demo_charts/d3/chords/chord_chart.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/admin/global/js/demo_charts/d3/chords/chord_chart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/admin/global/js/demo_charts/d3/chords/chord_tweens.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/admin/global/js/demo_charts/d3/chords/chord_tweens.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/admin/global/js/demo_charts/d3/lines/lines_advanced_zoom.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/admin/global/js/demo_charts/d3/lines/lines_advanced_zoom.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/admin/global/js/demo_pages/datatables_advanced.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/admin/global/js/demo_pages/datatables_advanced.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/admin/global/js/demo_pages/datatables_api.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/admin/global/js/demo_pages/datatables_api.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/admin/global/js/demo_pages/jqueryui_interactions.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/admin/global/js/demo_pages/jqueryui_interactions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/admin/global/js/demo_pages/task_manager_list.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/admin/global/js/demo_pages/task_manager_list.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/admin/global/js/demo_pages/widgets_stats.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/admin/global/js/demo_pages/widgets_stats.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/admin/global/js/main/jquery.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/admin/global/js/main/jquery.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/admin/global/js/plugins/editors/ace/ace.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/admin/global/js/plugins/editors/ace/ace.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/admin/global/js/plugins/editors/ckeditor/ckeditor.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/admin/global/js/plugins/editors/ckeditor/ckeditor.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/admin/global/js/plugins/editors/summernote/summernote.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/admin/global/js/plugins/editors/summernote/summernote.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/admin/global/js/plugins/extensions/jquery_ui/globalize/globalize.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/admin/global/js/plugins/extensions/jquery_ui/globalize/globalize.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/admin/global/js/plugins/extensions/jquery_ui/widgets.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/admin/global/js/plugins/extensions/jquery_ui/widgets.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/admin/global/js/plugins/forms/inputs/alpaca/alpaca.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/admin/global/js/plugins/forms/inputs/alpaca/alpaca.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/admin/global/js/plugins/forms/inputs/formatter.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/admin/global/js/plugins/forms/inputs/formatter.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/admin/global/js/plugins/forms/inputs/typeahead/handlebars.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/admin/global/js/plugins/forms/inputs/typeahead/handlebars.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/admin/global/js/plugins/forms/inputs/typeahead/typeahead.bundle.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/admin/global/js/plugins/forms/inputs/typeahead/typeahead.bundle.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/admin/global/js/plugins/forms/selects/bootstrap_multiselect.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/admin/global/js/plugins/forms/selects/bootstrap_multiselect.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/admin/global/js/plugins/forms/selects/select2.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/admin/global/js/plugins/forms/selects/select2.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/admin/global/js/plugins/forms/selects/select2/js/select2.full.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/admin/global/js/plugins/forms/selects/select2/js/select2.full.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/admin/global/js/plugins/forms/selects/select2/js/select2.full.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/admin/global/js/plugins/forms/selects/select2/js/select2.full.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/admin/global/js/plugins/forms/selects/select2/js/select2.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/admin/global/js/plugins/forms/selects/select2/js/select2.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/admin/global/js/plugins/forms/selects/select2/js/select2.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/admin/global/js/plugins/forms/selects/select2/js/select2.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/admin/global/js/plugins/forms/tags/tokenfield.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/admin/global/js/plugins/forms/tags/tokenfield.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/admin/global/js/plugins/media/fancybox.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/admin/global/js/plugins/media/fancybox.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/admin/global/js/plugins/tables/datatables/datatables.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/admin/global/js/plugins/tables/datatables/datatables.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/admin/global/js/plugins/tables/datatables/extensions/autofill.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/admin/global/js/plugins/tables/datatables/extensions/autofill.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/admin/global/js/plugins/tables/datatables/extensions/buttons.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/admin/global/js/plugins/tables/datatables/extensions/buttons.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/admin/global/js/plugins/tables/datatables/extensions/key_table.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/admin/global/js/plugins/tables/datatables/extensions/key_table.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/admin/global/js/plugins/tables/datatables/extensions/responsive.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/admin/global/js/plugins/tables/datatables/extensions/responsive.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/admin/global/js/plugins/tables/datatables/extensions/select.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/admin/global/js/plugins/tables/datatables/extensions/select.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/admin/global/js/plugins/tables/footable/footable.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/admin/global/js/plugins/tables/footable/footable.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/admin/global/js/plugins/uploaders/dropzone.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/admin/global/js/plugins/uploaders/dropzone.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/admin/global/js/plugins/visualization/c3/c3.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/admin/global/js/plugins/visualization/c3/c3.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/admin/global/js/plugins/visualization/d3/d3.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/admin/global/js/plugins/visualization/d3/d3.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/admin/global/js/plugins/visualization/echarts/echarts.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/admin/global/js/plugins/visualization/echarts/echarts.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/common/plugins/datatables-buttons/js/buttons.colVis.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/common/plugins/datatables-buttons/js/buttons.colVis.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/common/plugins/datatables-buttons/js/buttons.colVis.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/common/plugins/datatables-buttons/js/buttons.colVis.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/common/plugins/datatables-buttons/js/buttons.print.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/common/plugins/datatables-buttons/js/buttons.print.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/common/plugins/datatables-buttons/js/buttons.print.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/common/plugins/datatables-buttons/js/buttons.print.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/common/plugins/datatables/jquery.dataTables.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/common/plugins/datatables/jquery.dataTables.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/common/plugins/datatables/jquery.dataTables.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/common/plugins/datatables/jquery.dataTables.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/common/plugins/datepicker/bootstrap-datepicker.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/common/plugins/datepicker/bootstrap-datepicker.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/common/plugins/datepicker/jquery-ui.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/common/plugins/datepicker/jquery-ui.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/common/plugins/select2/js/select2.full.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/common/plugins/select2/js/select2.full.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/common/plugins/select2/js/select2.full.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/common/plugins/select2/js/select2.full.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/common/plugins/select2/js/select2.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/common/plugins/select2/js/select2.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/common/plugins/select2/js/select2.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/common/plugins/select2/js/select2.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/core.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/core.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/ct_strava.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/ct_strava.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/services.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_faqs_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_faqs_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nr-athlete-charity.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/admin/local/css/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/admin/local/css/custom.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/front/css/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/front/css/custom.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/front/js/custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/front/js/custom.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/front/js/plugins.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/front/js/plugins.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/strava/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/strava/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/front/images/default/avatar-one.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/front/images/default/avatar-two.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/front/images/default/breadcrumb.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/front/images/default/favicon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/front/images/default/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/front/images/default/logo_sticky.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/layouts/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/layouts/master.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/partials/_navbar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/partials/_navbar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/layouts/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/layouts/master.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/cornford/googlmapper/circle.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/cornford/googlmapper/javascript.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/cornford/googlmapper/map.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/cornford/googlmapper/mapper.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/cornford/googlmapper/marker.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/cornford/googlmapper/overlay.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/cornford/googlmapper/polygon.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/cornford/googlmapper/polyline.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/cornford/googlmapper/rectangle.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/cornford/googlmapper/streetview.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/error/layouts/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/error/layouts/master.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/front/layouts/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/layouts/master.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/front/partials/_footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/partials/_footer.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/front/partials/_mobile_menu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/partials/_mobile_menu.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/front/partials/_top_menu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/partials/_top_menu.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -129,32 +176,20 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/front/partials/_footer.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="220">
+              <caret line="11" column="26" lean-forward="true" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>admin</find>
-      <find>Admin</find>
-      <find>'index'</find>
-      <find>#</find>
-      <find>news</find>
-      <find>index</find>
-      <find>Banner</find>
-      <find>$banner</find>
-      <find>kdhbskfbsdkjhfads</find>
-      <find>banner</find>
-      <find>about_us</find>
-      <find>email</find>
-      <find>col-md-6</find>
-      <find>form-group</find>
-      <find>col-md-12</find>
-      <find>Faq</find>
-      <find>cases</find>
-      <find>title</find>
-      <find>latestNavChart</find>
-      <find>$favicon</find>
-      <find>$globalSite-&gt;favicon</find>
-      <find>logo_two</find>
       <find>Rice</find>
       <find>[4, 0, 0]</find>
       <find>[4, 1, 0]</find>
@@ -163,38 +198,60 @@
       <find>page-ti</find>
       <find>setupMa</find>
       <find>map</find>
+      <find>.page-title-area</find>
+      <find>.page-title-wrapper .page-title</find>
+      <find>page-title-wrapper text-center pt-125</find>
+      <find>/assets</find>
+      <find>$paypalModule</find>
+      <find>',</find>
+      <find>Site</find>
+      <find>contact</find>
+      <find>email</find>
+      <find>jhsgadsyfdd</find>
+      <find>'</find>
+      <find>&quot;username&quot;</find>
+      <find>certificate</find>
+      <find>client_secret</find>
+      <find>banner</find>
+      <find>brief_description</find>
+      <find>CreatePrivacyPoliciesTable</find>
+      <find>about</find>
+      <find>strava_client_secret</find>
+      <find>Faq</find>
+      <find>title</find>
+      <find>faq</find>
     </findStrings>
     <replaceStrings>
-      <replace>$team</replace>
-      <replace>[2, 6, 0]</replace>
-      <replace>faq</replace>
-      <replace>question</replace>
-      <replace>answer</replace>
-      <replace>athlete</replace>
-      <replace>Athlete</replace>
-      <replace>cases</replace>
-      <replace>['index']</replace>
-      <replace>About</replace>
-      <replace>$about</replace>
-      <replace>goals</replace>
-      <replace>about</replace>
-      <replace>mobile</replace>
-      <replace>athlete_id</replace>
-      <replace>col-xl-6</replace>
-      <replace>input-area pos-rel mb-30</replace>
-      <replace>col-xl-12</replace>
-      <replace>donation</replace>
-      <replace>Rice</replace>
-      <replace>rice</replace>
+      <replace>/../</replace>
+      <replace>/..</replace>
+      <replace>$provider</replace>
+      <replace>' =&gt; 'string',</replace>
+      <replace>Api</replace>
+      <replace>api</replace>
+      <replace>jhsgadsyfdd</replace>
+      <replace>username</replace>
+      <replace>password</replace>
+      <replace>secret</replace>
+      <replace>certificate</replace>
       <replace>currency</replace>
-      <replace>global_avg_price</replace>
-      <replace>latestPriceChart</replace>
-      <replace>$globalSite-&gt;favicon-&gt;file_url</replace>
-      <replace>logo_two</replace>
-      <replace>logo_sticky</replace>
-      <replace>[5, 0, 0]</replace>
-      <replace>[5, 1, 0]</replace>
-      <replace>Donation</replace>
+      <replace>client_secret</replace>
+      <replace>:</replace>
+      <replace>&quot;</replace>
+      <replace>&quot;sandbox_username&quot;</replace>
+      <replace>sandbox_certificate</replace>
+      <replace>strava_client_secret</replace>
+      <replace>PrivacyPolicy</replace>
+      <replace>description</replace>
+      <replace>privacyPolicy</replace>
+      <replace>stripe_key</replace>
+      <replace>stripe_secret</replace>
+      <replace>Public Message</replace>
+      <replace>PublicMessage</replace>
+      <replace>name</replace>
+      <replace>email</replace>
+      <replace>address</replace>
+      <replace>message</replace>
+      <replace>publicMessage</replace>
     </replaceStrings>
     <dirStrings>
       <dir>E:\CODINGs\MyProjects\Laravel-Framework\nr-athlete-charity-app\public\front\fonts</dir>
@@ -212,6 +269,8 @@
       <dir>E:\CODINGs\MyProjects\Laravel-Framework\nr-athlete-charity-app\Modules\Cms\Resources\views\faq</dir>
       <dir>E:\CODINGs\MyProjects\Laravel-Framework\nr-athlete-charity-app\resources</dir>
       <dir>E:\CODINGs\MyProjects\Laravel-Framework\nr-athlete-charity-app\Modules\Ums\Resources\views</dir>
+      <dir>E:\CODINGs\MyProjects\Laravel-Framework\nr-athlete-charity\Modules\Front\Resources\views</dir>
+      <dir>E:\CODINGs\MyProjects\Laravel-Framework\nr-athlete-charity</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -221,57 +280,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Modules/Cms/DataTables/CasesDataTable.php" />
-        <option value="$PROJECT_DIR$/Modules/Cms/DataTables/NewsDataTable.php" />
-        <option value="$PROJECT_DIR$/Modules/Cms/DataTables/PartnerDataTable.php" />
-        <option value="$PROJECT_DIR$/Modules/Cms/DataTables/FaqDataTable.php" />
-        <option value="$PROJECT_DIR$/Modules/Cms/DataTables/TeamDataTable.php" />
-        <option value="$PROJECT_DIR$/Modules/Cms/DataTables/TestimonialDataTable.php" />
-        <option value="$PROJECT_DIR$/Modules/Cms/DataTables/DonationDataTable.php" />
-        <option value="$PROJECT_DIR$/Modules/Cms/DataTables/RiceDataTable.php" />
-        <option value="$PROJECT_DIR$/Modules/Ums/DataTables/AthleteDataTable.php" />
-        <option value="$PROJECT_DIR$/Modules/Ums/DataTables/AdminDataTable.php" />
-        <option value="$PROJECT_DIR$/Modules/Cms/Services/DonationService.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/layouts/master.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/auth/layouts/master.blade.php" />
+        <option value="$PROJECT_DIR$/Modules/Cms/Http/Controllers/PrivacyPolicyController.php" />
+        <option value="$PROJECT_DIR$/Modules/Front/Http/Controllers/PrivacyPolicyController.php" />
+        <option value="$PROJECT_DIR$/Modules/Front/Resources/views/privacy-policy/index.blade.php" />
+        <option value="$PROJECT_DIR$/Modules/Cms/Http/Requests/CasesUpdateRequest.php" />
+        <option value="$PROJECT_DIR$/Modules/Cms/Http/Controllers/CasesController.php" />
+        <option value="$PROJECT_DIR$/resources/views/home.blade.php" />
+        <option value="$PROJECT_DIR$/config/services.php" />
+        <option value="$PROJECT_DIR$/routes/web.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/PayPalPaymentController.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_apis_table.php" />
+        <option value="$PROJECT_DIR$/Modules/Setting/Entities/Api.php" />
+        <option value="$PROJECT_DIR$/resources/seed/settings/settings.json" />
         <option value="$PROJECT_DIR$/.env" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/StripeController.php" />
+        <option value="$PROJECT_DIR$/Modules/Setting/Resources/views/api/index.blade.php" />
+        <option value="$PROJECT_DIR$/Modules/Front/Http/Controllers/DonationController.php" />
+        <option value="$PROJECT_DIR$/resources/lang/en/front/footer.php" />
+        <option value="$PROJECT_DIR$/resources/lang/de/front/footer.php" />
+        <option value="$PROJECT_DIR$/resources/lang/en/front/faq/index.php" />
+        <option value="$PROJECT_DIR$/resources/lang/de/front/faq/index.php" />
+        <option value="$PROJECT_DIR$/Modules/Front/Resources/views/faq/index.blade.php" />
+        <option value="$PROJECT_DIR$/resources/lang/de/front/contact/index.php" />
+        <option value="$PROJECT_DIR$/resources/views/front/partials/_mobile_menu.blade.php" />
+        <option value="$PROJECT_DIR$/resources/lang/en/front/master.php" />
+        <option value="$PROJECT_DIR$/resources/lang/de/front/master.php" />
         <option value="$PROJECT_DIR$/resources/views/front/partials/_top_menu.blade.php" />
-        <option value="$PROJECT_DIR$/Modules/Cms/Services/DashboardService.php" />
-        <option value="$PROJECT_DIR$/Modules/Front/Resources/views/about/index.blade.php" />
+        <option value="$PROJECT_DIR$/resources/lang/de/front/profile/index.php" />
+        <option value="$PROJECT_DIR$/resources/lang/en/front/profile/index.php" />
         <option value="$PROJECT_DIR$/Modules/Front/Resources/views/profile/account-info/index.blade.php" />
         <option value="$PROJECT_DIR$/Modules/Front/Resources/views/profile/personal-info/index.blade.php" />
         <option value="$PROJECT_DIR$/Modules/Front/Resources/views/profile/donation-history/index.blade.php" />
-        <option value="$PROJECT_DIR$/Modules/Front/Resources/views/contact/index.blade.php" />
-        <option value="$PROJECT_DIR$/Modules/Front/Resources/views/news/index.blade.php" />
-        <option value="$PROJECT_DIR$/Modules/Front/Resources/views/news/show.blade.php" />
-        <option value="$PROJECT_DIR$/Modules/Front/Resources/views/home/index.blade.php" />
-        <option value="$PROJECT_DIR$/Modules/Front/Resources/views/faq/index.blade.php" />
-        <option value="$PROJECT_DIR$/Modules/Front/Resources/views/team/index.blade.php" />
-        <option value="$PROJECT_DIR$/Modules/Front/Http/Controllers/Polyline/PolylineManager.php" />
-        <option value="$PROJECT_DIR$/Modules/Front/Http/Controllers/PolylineManager.php" />
-        <option value="$PROJECT_DIR$/app/Polyline/PolylineManager.php" />
-        <option value="$PROJECT_DIR$/app/Polyline/Polyline.php" />
-        <option value="$PROJECT_DIR$/app/Polyline/EncodedToSVG.php" />
-        <option value="$PROJECT_DIR$/Modules/Front/Http/Controllers/Polyline/index.php" />
-        <option value="$PROJECT_DIR$/public/front/js/map.js" />
-        <option value="$PROJECT_DIR$/public/common/plugins/leaflet/js/leaflet.js" />
-        <option value="$PROJECT_DIR$/public/common/plugins/leaflet/js/leaflet.pm.min.js" />
-        <option value="$PROJECT_DIR$/public/common/plugins/leaflet/js/polyline.js" />
-        <option value="$PROJECT_DIR$/public/common/plugins/leaflet/css/leaflet.css" />
-        <option value="$PROJECT_DIR$/public/common/plugins/leaflet/css/leaflet.pm.css" />
-        <option value="$PROJECT_DIR$/composer.json" />
-        <option value="$PROJECT_DIR$/config/app.php" />
-        <option value="$PROJECT_DIR$/Modules/Front/Http/Controllers/DonationController.php" />
-        <option value="$PROJECT_DIR$/Modules/Front/Resources/views/case/index.blade.php" />
-        <option value="$PROJECT_DIR$/Modules/Front/Resources/views/case/show.blade.php" />
-        <option value="$PROJECT_DIR$/public/front/js/custom.js" />
+        <option value="$PROJECT_DIR$/resources/lang/de/front/donate/index.php" />
+        <option value="$PROJECT_DIR$/resources/lang/en/front/donate/index.php" />
         <option value="$PROJECT_DIR$/Modules/Front/Resources/views/donation/index.blade.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_public_messages_table.php" />
+        <option value="$PROJECT_DIR$/Modules/Cms/Services/PublicMessageService.php" />
+        <option value="$PROJECT_DIR$/Modules/Cms/Repositories/PublicMessageRepository.php" />
+        <option value="$PROJECT_DIR$/Modules/Cms/Routes/web.php" />
+        <option value="$PROJECT_DIR$/Modules/Cms/Resources/views/public-message/action.blade.php" />
+        <option value="$PROJECT_DIR$/resources/lang/en/front/contact/index.php" />
+        <option value="$PROJECT_DIR$/Modules/Front/Routes/web.php" />
+        <option value="$PROJECT_DIR$/Modules/Front/Http/Controllers/ContactController.php" />
+        <option value="$PROJECT_DIR$/Modules/Cms/Http/Requests/PublicMessageStoreRequest.php" />
+        <option value="$PROJECT_DIR$/Modules/Cms/Resources/views/public-message/index.blade.php" />
+        <option value="$PROJECT_DIR$/Modules/Cms/Entities/PublicMessage.php" />
+        <option value="$PROJECT_DIR$/Modules/Cms/DataTables/PublicMessageDataTable.php" />
+        <option value="$PROJECT_DIR$/Modules/Cms/Http/Controllers/PublicMessageController.php" />
+        <option value="$PROJECT_DIR$/Modules/Cms/Resources/views/public-message/show.blade.php" />
+        <option value="$PROJECT_DIR$/Modules/Front/Resources/views/contact/index.blade.php" />
+        <option value="$PROJECT_DIR$/config/core.php" />
         <option value="$PROJECT_DIR$/resources/views/front/partials/_footer.blade.php" />
-        <option value="$PROJECT_DIR$/public/front/css/custom.css" />
-        <option value="$PROJECT_DIR$/Modules/Setting/Resources/views/contact/index.blade.php" />
-        <option value="$PROJECT_DIR$/Modules/Setting/Resources/views/site/index.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/auth/strava/login.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/front/partials/_mobile_menu.blade.php" />
       </list>
     </option>
   </component>
@@ -417,12 +476,20 @@
       <path value="$PROJECT_DIR$/vendor/codetoad/strava" />
       <path value="$PROJECT_DIR$/vendor/srmklive/paypal" />
       <path value="$PROJECT_DIR$/vendor/arielmejiadev/larapex-charts" />
+      <path value="$PROJECT_DIR$/vendor/sabberworm/php-css-parser" />
+      <path value="$PROJECT_DIR$/vendor/stripe/stripe-php" />
+      <path value="$PROJECT_DIR$/vendor/moneyphp/money" />
+      <path value="$PROJECT_DIR$/vendor/phenx/php-font-lib" />
+      <path value="$PROJECT_DIR$/vendor/dompdf/dompdf" />
+      <path value="$PROJECT_DIR$/vendor/phenx/php-svg-lib" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-icu" />
+      <path value="$PROJECT_DIR$/vendor/laravel/cashier" />
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-15" />
     <option name="y" value="50" />
-    <option name="width" value="985" />
+    <option name="width" value="1010" />
     <option name="height" value="1040" />
   </component>
   <component name="ProjectView">
@@ -430,7 +497,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -442,6 +508,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -450,7 +517,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="editor.config.ad.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Modules/Front/Http/Controllers/Polyline" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Modules/Cms/Resources/views" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -458,19 +525,19 @@
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\PhpStorm 2019.1.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\CODINGs\MyProjects\Laravel-Framework\nr-athlete-charity\Modules\Front\Http\Controllers\Polyline" />
-      <recent name="E:\CODINGs\MyProjects\Laravel-Framework\nr-athlete-charity\app" />
-      <recent name="E:\CODINGs\MyProjects\Laravel-Framework\nr-athlete-charity\public\front\images\default" />
-      <recent name="E:\CODINGs\MyProjects\Laravel-Framework\nr-athlete-charity-app\public\common\plugins" />
-      <recent name="E:\CODINGs\MyProjects\Laravel-Framework\nr-athlete-charity-app\Modules\Cms\Http\Controllers" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\CODINGs\MyProjects\Laravel-Framework\nr-athlete-charity\app\Polyline" />
       <recent name="E:\CODINGs\MyProjects\Laravel-Framework\nr-athlete-charity\Modules\Front\Http\Controllers" />
       <recent name="E:\CODINGs\MyProjects\Laravel-Framework\nr-athlete-charity\app" />
       <recent name="E:\CODINGs\MyProjects\Laravel-Framework\nr-athlete-charity-app\Modules\Ums\Resources\views" />
       <recent name="E:\CODINGs\MyProjects\Laravel-Framework\nr-athlete-charity-app\Modules\Setting\Http\Controllers" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\CODINGs\MyProjects\Laravel\nr-athlete-charity\Modules\Cms\Resources\views" />
+      <recent name="E:\CODINGs\MyProjects\Laravel\nr-athlete-charity\Modules\Cms\Repositories" />
+      <recent name="E:\CODINGs\MyProjects\Laravel\nr-athlete-charity\Modules\Cms\Services" />
+      <recent name="E:\CODINGs\MyProjects\Laravel\nr-athlete-charity\Modules\Cms\DataTables" />
+      <recent name="E:\CODINGs\MyProjects\Laravel\nr-athlete-charity\Modules\Cms\Http\Controllers" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -572,19 +639,38 @@
       <workItem from="1622468197622" duration="6594000" />
       <workItem from="1622483786512" duration="13782000" />
       <workItem from="1622536980166" duration="28800000" />
+      <workItem from="1622635940656" duration="2771000" />
+      <workItem from="1622707915109" duration="9699000" />
+      <workItem from="1622724654753" duration="484000" />
+      <workItem from="1622725371228" duration="5538000" />
+      <workItem from="1622731590410" duration="77000" />
+      <workItem from="1622731891471" duration="1769000" />
+      <workItem from="1622734699696" duration="1760000" />
+      <workItem from="1623174260167" duration="8557000" />
+      <workItem from="1623230784309" duration="15463000" />
+      <workItem from="1623317376516" duration="4423000" />
+      <workItem from="1623324028583" duration="49000" />
+      <workItem from="1623325153923" duration="631000" />
+      <workItem from="1623357086238" duration="664000" />
+      <workItem from="1623406425716" duration="343000" />
+      <workItem from="1624025707617" duration="26503000" />
+      <workItem from="1624092839936" duration="45000" />
+      <workItem from="1633341239837" duration="11633000" />
+      <workItem from="1633371270469" duration="369000" />
+      <workItem from="1633372415628" duration="82000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="471134000" />
+    <option name="totallyTimeSpent" value="561994000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="33" width="1550" height="838" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28120807" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="npm" order="2" side_tool="true" />
-      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info id="Structure" order="0" side_tool="true" weight="0.25" />
+      <window_info id="npm" order="1" side_tool="true" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="3" visible="true" weight="0.21946308" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -596,7 +682,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.26203966" />
+      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.26203966" />
       <window_info anchor="bottom" id="TypeScript" order="12" />
       <window_info anchor="bottom" id="Database Console" order="13" weight="0.32956153" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -620,98 +706,7 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/front/images/default/logo_sticky.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/front/images/default/favicon.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/front/images/default/logo.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Modules/Cms/Services/DashboardService.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1000">
-          <caret line="53" column="29" selection-start-line="53" selection-start-column="29" selection-end-line="53" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Modules/Cms/Http/Controllers/DashboardController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="20" column="32" lean-forward="true" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
-          <folding>
-            <element signature="e#48#93#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Modules/Front/Resources/views/about/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="433">
-          <caret line="76" column="31" selection-start-line="76" selection-start-column="31" selection-end-line="76" selection-end-column="31" />
-          <folding>
-            <element signature="e#1154#4191#0#HTML" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Modules/Front/Resources/views/profile/account-info/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="25" column="50" selection-start-line="25" selection-start-column="50" selection-end-line="25" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Modules/Front/Resources/views/profile/personal-info/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="25" column="50" selection-start-line="25" selection-start-column="50" selection-end-line="25" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Modules/Front/Resources/views/profile/donation-history/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="25" column="51" selection-start-line="25" selection-start-column="51" selection-end-line="25" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Modules/Front/Resources/views/news/show.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="56" column="184" selection-start-line="56" selection-start-column="184" selection-end-line="56" selection-end-column="184" />
-          <folding>
-            <element signature="e#3089#3185#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Modules/Front/Resources/views/faq/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="44" column="72" lean-forward="true" selection-start-line="44" selection-start-column="52" selection-end-line="44" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Modules/Front/Resources/views/news/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="75" column="37" lean-forward="true" selection-start-line="72" selection-start-column="32" selection-end-line="75" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Modules/Front/Resources/views/team/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="54" column="35" lean-forward="true" selection-start-line="54" selection-start-column="35" selection-end-line="54" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/979ee3df-3803-4f2e-97d0-60b3ed7c3e43/console.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="das://979ee3df-3803-4f2e-97d0-60b3ed7c3e43/schema/nr-athlete-charity-app/table/rices">
+    <entry file="das://979ee3df-3803-4f2e-97d0-60b3ed7c3e43/schema/nr-athlete-charity-app/table/donations">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true">
@@ -720,255 +715,350 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Helpers/helpers.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Controller.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/StripeController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Polyline/PolylineManager.php" />
-    <entry file="file://$PROJECT_DIR$/app/Polyline/Polyline.php" />
-    <entry file="file://$PROJECT_DIR$/app/Polyline/EncodedToSVG.php" />
-    <entry file="file://$PROJECT_DIR$/Modules/Front/Http/Controllers/Polyline/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="2" column="27" selection-start-line="1" selection-end-line="2" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Modules/Front/Http/Controllers/Polyline/Polyline.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/front/js/map.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/common/plugins/leaflet/js/leaflet.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="4" column="16" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
+        <state relative-caret-position="218">
+          <caret line="39" column="50" selection-start-line="39" selection-start-column="50" selection-end-line="39" selection-end-column="50" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#40#68#0#PHP" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/common/plugins/leaflet/js/leaflet.pm.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="119980" lean-forward="true" selection-start-column="119980" selection-end-column="119980" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/common/plugins/leaflet/css/leaflet.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="433">
-          <caret line="619" column="13" lean-forward="true" selection-start-line="619" selection-start-column="13" selection-end-line="619" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/common/plugins/leaflet/css/leaflet.pm.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="433">
-          <caret line="161" column="1" selection-start-line="161" selection-start-column="1" selection-end-line="161" selection-end-column="1" />
-          <folding>
-            <element signature="e#1432#3339#2" expanded="true" />
-            <element signature="e#3412#5811#2" expanded="true" />
-            <element signature="e#5885#7632#2" expanded="true" />
-            <element signature="e#7704#10447#2" expanded="true" />
-            <element signature="e#10526#10881#2" expanded="true" />
-            <element signature="e#10956#13663#2" expanded="true" />
-            <element signature="e#13735#15590#2" expanded="true" />
-            <element signature="e#15660#17851#2" expanded="true" />
-            <element signature="e#17921#18804#2" expanded="true" />
-            <element signature="e#18873#22192#2" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/common/plugins/leaflet/js/polyline.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="433">
-          <caret line="159" column="1" selection-start-line="159" selection-start-column="1" selection-end-line="159" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/app.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="175" column="11" lean-forward="true" selection-start-line="175" selection-start-column="11" selection-end-line="175" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="51" column="31" lean-forward="true" selection-start-line="51" selection-start-column="31" selection-end-line="51" selection-end-column="31" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Modules/Front/Http/Controllers/DonationController.php">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="453">
+          <caret line="84" column="9" selection-start-line="84" selection-start-column="9" selection-end-line="84" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/front/layouts/master.blade.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/lang/en/front/footer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="13" column="22" lean-forward="true" selection-start-line="10" selection-start-column="4" selection-end-line="13" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/lang/de/front/footer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="12" column="27" lean-forward="true" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/lang/en/front/faq/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="3" column="38" lean-forward="true" selection-start-line="3" selection-start-column="38" selection-end-line="3" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Modules/Front/Resources/views/faq/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="72" column="54" lean-forward="true" selection-start-line="72" selection-start-column="54" selection-end-line="72" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/lang/de/front/faq/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="2" column="8" lean-forward="true" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/front/partials/_mobile_menu.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="40" column="51" selection-start-line="40" selection-start-column="51" selection-end-line="40" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/lang/en/front/master.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="8" column="44" lean-forward="true" selection-start-line="7" selection-start-column="4" selection-end-line="8" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/lang/de/front/master.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="7" column="47" lean-forward="true" selection-start-line="6" selection-start-column="4" selection-end-line="7" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/lang/de/front/profile/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="6" column="47" lean-forward="true" selection-start-line="6" selection-start-column="47" selection-end-line="6" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/lang/en/front/profile/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="8" column="2" lean-forward="true" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Modules/Front/Resources/views/about/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="92" column="75" selection-start-line="92" selection-start-column="40" selection-end-line="92" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Modules/Front/Resources/views/profile/account-info/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1481">
+          <caret line="33" column="55" lean-forward="true" selection-start-line="33" selection-start-column="55" selection-end-line="33" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Modules/Front/Resources/views/profile/personal-info/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="45" column="102" selection-start-line="45" selection-start-column="102" selection-end-line="45" selection-end-column="102" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Modules/Front/Resources/views/profile/donation-history/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-20">
+          <caret line="44" column="105" selection-start-line="44" selection-start-column="105" selection-end-line="44" selection-end-column="105" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/lang/en/front/donate/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="16" column="29" lean-forward="true" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/lang/de/front/donate/index.php">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="233">
-          <caret line="75" lean-forward="true" selection-start-line="75" selection-end-line="75" />
+          <caret line="14" column="28" lean-forward="true" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2020_11_02_161112_create_contacts_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-160">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_public_messages_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
           <folding>
-            <element signature="e#50#68#0#PHP" expanded="true" />
+            <element signature="e#7#52#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Modules/Front/Resources/views/home/index.blade.php">
+    <entry file="file://$PROJECT_DIR$/Modules/Cms/Resources/views/privacy-policy/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Modules/Cms/DataTables/TeamDataTable.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="140" column="110" selection-start-line="140" selection-start-column="79" selection-end-line="140" selection-end-column="110" />
+        <state relative-caret-position="-720">
+          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Modules/Front/Resources/views/case/show.blade.php">
+    <entry file="file://$PROJECT_DIR$/Modules/Cms/Repositories/PublicMessageRepository.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="34" column="51" lean-forward="true" selection-start-line="34" selection-start-column="51" selection-end-line="34" selection-end-column="51" />
+        <state relative-caret-position="260">
+          <caret line="13" column="27" lean-forward="true" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Modules/Front/Resources/views/case/index.blade.php">
+    <entry file="file://$PROJECT_DIR$/Modules/Cms/Services/PublicMessageService.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="39" column="99" lean-forward="true" selection-start-line="39" selection-start-column="44" selection-end-line="39" selection-end-column="99" />
+        <state relative-caret-position="800">
+          <caret line="70" column="6" lean-forward="true" selection-start-line="70" selection-start-column="6" selection-end-line="70" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/front/js/custom.js">
+    <entry file="file://$PROJECT_DIR$/Modules/Cms/Resources/views/public-message/edit.blade.php" />
+    <entry file="file://$PROJECT_DIR$/Modules/Cms/Resources/views/public-message/action.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="12" column="24" lean-forward="true" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
+        <state relative-caret-position="260">
+          <caret line="13" column="62" selection-start-line="13" selection-start-column="62" selection-end-line="13" selection-end-column="62" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/front/partials/_alert_donate.blade.php">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/Modules/Front/Resources/views/donation/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="316" column="26" lean-forward="true" selection-end-line="444" />
+        <state relative-caret-position="320">
+          <caret line="28" column="4" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="44" />
           <folding>
             <element signature="e#9#15#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/lang/de/front/contact/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="10" column="26" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/lang/en/front/contact/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="10" column="37" lean-forward="true" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Modules/Cms/Routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="30" column="40" lean-forward="true" selection-start-line="30" selection-start-column="40" selection-end-line="30" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Modules/Front/Routes/web.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="22" column="17" lean-forward="true" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
+        <state relative-caret-position="80">
+          <caret line="13" column="56" lean-forward="true" selection-start-line="13" selection-start-column="56" selection-end-line="13" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Modules/Cms/Http/Controllers/PrivacyPolicyController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-580">
+          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Modules/Cms/Http/Controllers/FaqController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="313">
+          <caret line="71" column="5" lean-forward="true" selection-start-line="56" selection-start-column="4" selection-end-line="71" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Modules/Cms/Resources/views/news/create.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="42" column="119" lean-forward="true" selection-start-line="42" selection-start-column="20" selection-end-line="42" selection-end-column="119" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Modules/Front/Http/Controllers/ContactController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="48" column="26" selection-start-line="48" selection-start-column="26" selection-end-line="48" selection-end-column="26" />
+          <folding>
+            <element signature="e#50#84#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Modules/Cms/Http/Requests/PublicMessageStoreRequest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="25" column="16" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/charts.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/BaseModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="13" column="5" lean-forward="true" selection-start-line="8" selection-start-column="4" selection-end-line="13" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Modules/Cms/Resources/views/public-message/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="44" column="17" lean-forward="true" selection-start-line="44" selection-start-column="17" selection-end-line="44" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Modules/Cms/Entities/PublicMessage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="296">
+          <caret line="27" column="5" lean-forward="true" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Modules/Cms/Resources/views/news/show.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1380" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Modules/Cms/Http/Controllers/PublicMessageController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="54" column="22" lean-forward="true" selection-start-line="54" selection-start-column="22" selection-end-line="54" selection-end-column="22" />
+          <folding>
+            <element signature="e#48#84#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Modules/Cms/DataTables/PublicMessageDataTable.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="73" column="51" lean-forward="true" selection-start-line="73" selection-start-column="51" selection-end-line="73" selection-end-column="51" />
+          <folding>
+            <element signature="e#42#81#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Modules/Cms/Resources/views/public-message/show.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="373">
+          <caret line="85" column="24" lean-forward="true" selection-start-line="85" selection-start-column="24" selection-end-line="85" selection-end-column="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Modules/Front/Resources/views/contact/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="44" column="42" lean-forward="true" selection-start-line="44" selection-start-column="42" selection-end-line="44" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Modules/Setting/Http/Requests/ContactUpdateRequest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="26" column="30" lean-forward="true" selection-start-line="26" selection-start-column="30" selection-end-line="26" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Modules/Setting/Http/Controllers/ContactController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="49" column="36" lean-forward="true" selection-start-line="49" selection-start-column="36" selection-end-line="49" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Modules/Setting/Resources/views/contact/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="141" column="38" lean-forward="true" selection-start-line="141" selection-start-column="38" selection-end-line="141" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/front/css/custom.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="354" column="12" selection-start-line="354" selection-start-column="12" selection-end-line="354" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Modules/Setting/Resources/views/site/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="59" column="107" lean-forward="true" selection-start-line="59" selection-start-column="107" selection-end-line="59" selection-end-column="107" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/auth/login.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1020">
-          <caret line="51" column="59" lean-forward="true" selection-start-line="51" selection-start-column="59" selection-end-line="51" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/auth/partials/_footer.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="14" column="46" lean-forward="true" selection-start-line="14" selection-start-column="46" selection-end-line="14" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/auth/layouts/master.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="37" column="26" lean-forward="true" selection-start-line="37" selection-start-column="26" selection-end-line="37" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/auth/strava/login.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="21" column="41" lean-forward="true" selection-end-line="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/front/partials/_top_menu.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="60" column="89" lean-forward="true" selection-start-line="60" selection-start-column="35" selection-end-line="60" selection-end-column="89" />
+        <state relative-caret-position="138">
+          <caret line="116" column="53" lean-forward="true" selection-start-line="116" selection-start-column="53" selection-end-line="116" selection-end-column="53" />
+          <folding>
+            <element signature="e#7729#7751#0#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/core.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="280" column="10" lean-forward="true" selection-start-line="280" selection-start-column="10" selection-end-line="280" selection-end-column="10" />
-          <folding>
-            <element signature="e#54#4893#1#PHP" />
-            <element signature="e#4933#6140#1#PHP" />
-            <element signature="e#6184#7261#1#PHP" />
-          </folding>
+        <state relative-caret-position="193">
+          <caret line="187" column="10" lean-forward="true" selection-start-line="187" selection-start-column="10" selection-end-line="187" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/front/partials/_top_menu.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="23" column="44" lean-forward="true" selection-start-line="23" selection-start-column="44" selection-end-line="23" selection-end-column="44" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/front/partials/_footer.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="56" column="34" lean-forward="true" selection-start-line="56" selection-start-column="34" selection-end-line="56" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/front/partials/_mobile_menu.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="35" column="22" lean-forward="true" selection-end-line="141" />
+        <state relative-caret-position="220">
+          <caret line="11" column="26" lean-forward="true" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
         </state>
       </provider>
     </entry>

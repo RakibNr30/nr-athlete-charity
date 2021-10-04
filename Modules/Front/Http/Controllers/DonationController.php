@@ -9,6 +9,7 @@ use Illuminate\Routing\Controller;
 use Modules\Cms\Services\CasesService;
 use Modules\Cms\Services\DashboardService;
 use Modules\Cms\Services\RiceService;
+use Modules\Setting\Services\ApiService;
 use Modules\Ums\Entities\User;
 
 class DonationController extends Controller
@@ -21,15 +22,18 @@ class DonationController extends Controller
     public function __construct(
         DashboardService $dashboardService,
         CasesService $casesService,
-        RiceService $riceService
+        RiceService $riceService,
+        ApiService $apiService
     )
     {
         $this->middleware('donner');
 
+        $apiCredentials = $apiService->firstOrCreate([]);
+
         $this->strava = new Strava(
-            config('ct_strava.client_id'),
-            config('ct_strava.client_secret'),
-            config('ct_strava.redirect_uri'),
+            $apiCredentials->strava_client_id ?? '',
+            $apiCredentials->strava_client_secret ?? '',
+            config('ct_strava.redirect_uri') ?? '',
             new Client()
         );
 

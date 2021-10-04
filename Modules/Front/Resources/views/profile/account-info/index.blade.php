@@ -1,4 +1,4 @@
-@extends('front.layouts.master')
+@extends('front.layouts.master', ['active' => [8, 0]])
 
 @section('title')
 @stop
@@ -9,9 +9,11 @@
             <div class="container">
                 <div class="row">
                     <div class="col-xl-4 offset-xl-4">
-                        <div class="page-title-wrapper text-center pt-125">
+                        <div class="page-title-wrapper text-center pt-60">
                             <div class="page-title-box">
-                                <h2 class="page-title">Profile</h2>
+                                <h2 class="page-title">
+                                    <span>{{ __('front/profile/index.profile') }}</span>
+                                </h2>
                                 <ul class="breadcrumb-list">
                                     <li><a href="{{ route('front.index') }}">Home <i class="far fa-chevron-right"></i></a></li>
                                     <li><a class="active">Account Info</a></li>
@@ -31,8 +33,8 @@
                             <div class="widget mb-30 wow fadeInUp2  animated" data-wow-delay=".1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp2;">
                                 <ul class="widget-cat">
                                     <li class="active"><a href="{{ route('front.profile-account-info.index') }}">Account Info</a></li>
-                                    <li><a href="{{ route('front.profile-personal-info.index') }}">Personal Info</a></li>
-                                    <li><a href="{{ route('front.profile-donation-history.index') }}">Donation History</a></li>
+                                    <li><a href="{{ route('front.profile-personal-info.index') }}">{{ __('front/profile/index.personal_info') }}</a></li>
+                                    <li><a href="{{ route('front.profile-donation-history.index') }}">{{ __('front/profile/index.donation_history') }}</a></li>
                                 </ul>
                             </div>
                         </div>

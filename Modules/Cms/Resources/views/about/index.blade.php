@@ -53,7 +53,7 @@
                                     @enderror
                                 </div>
                             </div>
-                            <div class="col-md-12">
+                            {{--<div class="col-md-12">
                                 <div class="form-group">
                                     <label for="mission" class="@error('mission') text-danger @enderror">Our Mission</label>
                                     <textarea id="mission" name="mission" class="form-control ck-text-editor @error('mission') is-invalid @enderror" rows="3"
@@ -63,7 +63,7 @@
                                           role="alert"><strong>{{ $message }}</strong></span>
                                     @enderror
                                 </div>
-                            </div>
+                            </div>--}}
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <label for="vision" class="@error('vision') text-danger @enderror">Our Vision</label>

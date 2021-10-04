@@ -82,6 +82,20 @@ return [
                     "url" => "/backend/partner",
                     "permission" => "Partners",
                 ],
+                [
+                    "name" => "Privacy Policy",
+                    "id" => "privacy_policy",
+                    "icon" => "",
+                    "url" => "/backend/privacy-policy",
+                    "permission" => "Privacy Policy",
+                ],
+                [
+                    "name" => "Public Message",
+                    "id" => "public_message",
+                    "icon" => "",
+                    "url" => "/backend/public-message",
+                    "permission" => "Privacy Policy",
+                ],
             ]
         ],
         [
@@ -150,6 +164,13 @@ return [
                     "icon" => "",
                     "url" => "/backend/seo",
                     "permission" => "Seo",
+                ],
+                [
+                    "name" => "Api",
+                    "id" => "api",
+                    "icon" => "",
+                    "url" => "/backend/api",
+                    "permission" => "Api",
                 ]
             ]
         ]
@@ -158,6 +179,7 @@ return [
     'front_menu' => [
         [
             "name" => "Home",
+            "name_de" => "Home",
             "id" => "home",
             "icon" => "",
             "url" => "/",
@@ -165,7 +187,8 @@ return [
             "children" => []
         ],
         [
-            "name" => "About Us",
+            "name" => "About us",
+            "name_de" => "Über uns",
             "id" => "about_us",
             "icon" => "",
             "url" => "/about-us",
@@ -174,6 +197,7 @@ return [
         ],
         [
             "name" => "FAQ",
+            "name_de" => "FAQ",
             "id" => "faq",
             "icon" => "",
             "url" => "/faq",
@@ -182,6 +206,7 @@ return [
         ],
         [
             "name" => "Team",
+            "name_de" => "Team",
             "id" => "team",
             "icon" => "",
             "url" => "/team",
@@ -190,6 +215,7 @@ return [
         ],
         [
             "name" => "News",
+            "name_de" => "News",
             "id" => "news",
             "icon" => "",
             "url" => "/news",
@@ -197,10 +223,11 @@ return [
             "children" => [],
         ],
         [
-            "name" => "Contact Us",
-            "id" => "contact_us",
+            "name" => "Contact",
+            "name_de" => "Kontakt",
+            "id" => "contact",
             "icon" => "",
-            "url" => "/contact-us",
+            "url" => "/contact",
             "permission" => "",
             "children" => []
         ],

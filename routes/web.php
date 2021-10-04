@@ -22,3 +22,5 @@ Route::get('/auth/strava/callback', 'App\Http\Controllers\Auth\StravaAuthControl
 Route::post('handle-payment', 'App\Http\Controllers\PayPalPaymentController@handlePayment')->name('make.payment');
 Route::get('cancel-payment', 'App\Http\Controllers\PayPalPaymentController@paymentCancel')->name('cancel.payment');
 Route::get('payment-success', 'App\Http\Controllers\PayPalPaymentController@paymentSuccess')->name('success.payment');
+
+Route::post('stripe/handle-payment', 'App\Http\Controllers\StripeController@stripePayment')->name('stripe.make.payment');

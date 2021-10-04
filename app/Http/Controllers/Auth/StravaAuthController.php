@@ -8,6 +8,7 @@ use GuzzleHttp\Client;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
+use Modules\Setting\Services\ApiService;
 use Modules\Ums\Entities\User;
 use Modules\Ums\Entities\UserPersonalInfo;
 use Modules\Ums\Entities\UserResidentialInfo;
@@ -16,12 +17,14 @@ class StravaAuthController extends Controller
 {
     protected $strava;
 
-    public function __construct()
+    public function __construct(ApiService $apiService)
     {
+        $apiCredentials = $apiService->firstOrCreate([]);
+
         $this->strava = new Strava(
-            config('ct_strava.client_id'),
-            config('ct_strava.client_secret'),
-            config('ct_strava.redirect_uri'),
+            $apiCredentials->strava_client_id ?? '',
+            $apiCredentials->strava_client_secret ?? '',
+            config('ct_strava.redirect_uri') ?? '',
             new Client()
         );
     }

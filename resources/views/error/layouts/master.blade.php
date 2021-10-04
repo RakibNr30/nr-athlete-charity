@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ app()->getLocale() }}">
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 <head>
     <meta charset="utf-8">

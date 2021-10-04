@@ -53,7 +53,7 @@ class DashboardService
 
         // total saved people
         $counter->latestRicePrice = $this->riceRepository->model
-            ->latest()->first('global_avg_price')->global_avg_price;
+            ->latest()->first('global_avg_price')->global_avg_price ?? 0;
 
         return $counter;
     }

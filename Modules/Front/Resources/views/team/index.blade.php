@@ -1,4 +1,4 @@
-@extends('front.layouts.master')
+@extends('front.layouts.master', ['active' => [3, 0]])
 
 @section('title')
 @stop
@@ -10,9 +10,11 @@
             <div class="container">
                 <div class="row">
                     <div class="col-xl-6 offset-xl-3">
-                        <div class="page-title-wrapper text-center pt-125">
+                        <div class="page-title-wrapper text-center pt-60">
                             <div class="page-title-box">
-                                <h2 class="page-title">Team Member</h2>
+                                <h2 class="page-title">
+                                    <span>Team Member</span>
+                                </h2>
                                 <ul class="breadcrumb-list">
                                     <li><a href="{{ route('front.index') }}">Home <i class="far fa-chevron-right"></i></a></li>
                                     <li><a class="active">Team Member</a></li>

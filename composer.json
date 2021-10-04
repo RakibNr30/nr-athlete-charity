@@ -6,6 +6,7 @@
     "license": "MIT",
     "require": {
         "php": "^7.3|^8.0",
+        "ext-dom": "*",
         "ext-json": "*",
         "arielmejiadev/larapex-charts": "^2.1",
         "codetoad/strava": "^1.0",
@@ -13,6 +14,7 @@
         "fideloper/proxy": "^4.4",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
+        "laravel/cashier": "^13.1",
         "laravel/framework": "^8.12",
         "laravel/tinker": "^2.5",
         "laravel/ui": "^3.2",
@@ -21,8 +23,8 @@
         "spatie/laravel-medialibrary": "^7.19",
         "spatie/laravel-permission": "^4.0",
         "srmklive/paypal": "~1.0",
-        "yajra/laravel-datatables": "^1.5",
-        "ext-dom": "*"
+        "stripe/stripe-php": "^7.85",
+        "yajra/laravel-datatables": "^1.5"
     },
     "require-dev": {
         "facade/ignition": "^2.5",

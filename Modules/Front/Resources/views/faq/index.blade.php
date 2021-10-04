@@ -1,4 +1,4 @@
-@extends('front.layouts.master')
+@extends('front.layouts.master', ['active' => [2, 0]])
 
 @section('title')
 @stop
@@ -9,9 +9,11 @@
             <div class="container">
                 <div class="row">
                     <div class="col-xl-6 offset-xl-3">
-                        <div class="page-title-wrapper text-center pt-125">
+                        <div class="page-title-wrapper text-center pt-60">
                             <div class="page-title-box">
-                                <h2 class="page-title">Faq</h2>
+                                <h2 class="page-title">
+                                    <span>Faq</span>
+                                </h2>
                                 <ul class="breadcrumb-list">
                                     <li><a href="{{ route('front.index') }}">Home <i class="far fa-chevron-right"></i></a></li>
                                     <li><a class="active">Faq</a></li>
@@ -60,7 +62,7 @@
                         <div class="details-right-area">
                             <div class="widget white-bg mb-30 wow fadeInUp2 animated" data-wow-delay='.2s'>
                                 <div class="widget-post">
-                                    <h3 class="cases-title mb-30">Popular Cases</h3>
+                                    <h3 class="cases-title mb-30">{{ __('front/faq/index.popular_cases') }}</h3>
                                     @if(count($data->cases))
                                         @foreach($data->cases as $index => $case)
                                             <div class="post d-flex align-items-center mb-20">

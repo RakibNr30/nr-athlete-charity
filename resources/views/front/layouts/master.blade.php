@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js" lang="">
+<html class="no-js" lang="{{ app()->getLocale() }}">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -17,8 +17,8 @@
 <body>
 
 {{--@include('front.partials._preloader')--}}
-@include('front.partials._top_menu')
-@include('front.partials._mobile_menu')
+@include('front.partials._top_menu', ['active' => $active])
+@include('front.partials._mobile_menu', ['active' => $active])
 @yield('content')
 @include('front.partials._footer')
 @include('front.partials._fs_search')

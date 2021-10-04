@@ -1,4 +1,4 @@
-@extends('front.layouts.master')
+@extends('front.layouts.master', ['active' => [1, 0]])
 
 @section('title')
 @stop
@@ -10,12 +10,18 @@
             <div class="container">
                 <div class="row">
                     <div class="col-xl-4 offset-xl-4">
-                        <div class="page-title-wrapper text-center pt-125">
+                        <div class="page-title-wrapper text-center pt-60">
                             <div class="page-title-box">
-                                <h2 class="page-title">About</h2>
+                                <h2 class="page-title">
+                                    <span>{{ __('front/about/index.about_us') }}</span>
+                                </h2>
                                 <ul class="breadcrumb-list">
                                     <li><a href="{{ route('front.index') }}">Home <i class="far fa-chevron-right"></i></a></li>
-                                    <li><a class="active">About Us</a></li>
+                                    <li>
+                                        <a class="active">
+                                            {{ __('front/about/index.about_us') }}
+                                        </a>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -36,7 +42,7 @@
                                     {{ $data->counter->totalAthlete ?? 0 }}
                                 </span>
                             </h1>
-                            <p>Total Athlete</p>
+                            <p>{{ __('front/about/index.total_athlete') }}</p>
                         </div>
                     </div>
                     {{--<div class="col-xl-3 col-lg-3 col-md-3 col-sm-6">
@@ -56,7 +62,7 @@
                                     {{ $data->counter->totalDonation ?? 0 }}
                                 </span>
                             </h1>
-                            <p>Total Donation</p>
+                            <p>{{ __('front/about/index.total_donation') }}</p>
                         </div>
                     </div>
                     <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
@@ -68,7 +74,7 @@
                                 {{ $data->counter->latestRicePrice ?? 0 }}
                             </span>
                             </h1>
-                            <p>Rice Price (per kg)</p>
+                            <p>{{ __('front/about/index.rice_price') }}</p>
                         </div>
                     </div>
                 </div>
@@ -84,7 +90,7 @@
                             @if($data->about->about)
                                 <div class="section-title text-left wow fadeInUp2 animated" data-wow-delay='.1s'>
                                     <h6>
-                                        About {{ $globalSite->title ?? 'Athlete Charity' }}
+                                        {{ __('front/about/index.about') }} {{ $globalSite->title ?? 'Athlete Charity' }}
                                     </h6>
                                 </div>
                                 <div class="mb-20">
@@ -93,16 +99,12 @@
                             @endif
                             <ul class="nav nav-tabs mb-35" id="myTab" role="tablist">
                                 <li class="nav-item">
-                                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab"
-                                       aria-controls="home" aria-selected="true">Mission</a>
-                                </li>
-                                <li class="nav-item">
                                     <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab"
-                                       aria-controls="profile" aria-selected="false">Vision</a>
+                                       aria-controls="profile" aria-selected="false">{{ __('front/about/index.vision') }}</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab"
-                                       aria-controls="contact" aria-selected="false">Our Goals</a>
+                                       aria-controls="contact" aria-selected="false">{{ __('front/about/index.our_goals') }}</a>
                                 </li>
                             </ul>
                             <div class="tab-content" id="myTabContent">

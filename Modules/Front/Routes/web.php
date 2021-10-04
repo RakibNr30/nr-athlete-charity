@@ -13,12 +13,13 @@
 
 Route::resource('/', 'HomeController')->only(['index']);
 Route::resource('/about-us', 'AboutController')->only(['index']);
-Route::resource('/contact-us', 'ContactController')->only(['index']);
+Route::resource('/contact', 'ContactController')->only(['index', 'store']);
 Route::resource('/faq', 'FaqController')->only(['index']);
 Route::resource('/team', 'TeamController')->only(['index']);
 Route::resource('/news', 'NewsController')->only(['index', 'show']);
 Route::resource('/donate', 'DonationController')->only(['index'])->middleware(['auth']);
 Route::resource('/cases', 'CasesController')->only(['index', 'show']);
+Route::resource('/privacy-policy', 'PrivacyPolicyController')->only(['index']);
 
 // profile routes
 Route::prefix('profile')->name('profile-')->middleware(['donner'])->group(function () {

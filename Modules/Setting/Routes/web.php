@@ -17,3 +17,5 @@ Route::resource('site', 'SiteController')->only(['index', 'update']);
 Route::resource('contact', 'ContactController')->only(['index', 'update']);
 // seo routes
 Route::resource('seo', 'SeoController')->only(['index', 'update']);
+// api routes
+Route::resource('api', 'ApiController')->only(['index', 'update']);

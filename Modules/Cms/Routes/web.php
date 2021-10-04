@@ -31,5 +31,9 @@ Route::resource('team', 'TeamController');
 Route::resource('faq', 'FaqController');
 // rice routes
 Route::resource('rice', 'RiceController')->except(['show', 'destroy']);
-// rice routes
+// donation routes
 Route::resource('donation', 'DonationController')->only(['index']);
+// privacy policy routes
+Route::resource('privacy-policy', 'PrivacyPolicyController')->only(['index', 'update']);
+// public message routes
+Route::resource('public-message', 'PublicMessageController')->only(['index', 'show', 'destroy']);

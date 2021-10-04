@@ -11,23 +11,35 @@
     </div>
     <nav class="side-mobile-menu">
         <ul id="mobile-menu-active">
-            @foreach(config('core.front_menu') as $menu)
+            @foreach(config('core.front_menu') as $menuKey => $menu)
                 @if(empty($menu['children']))
                     <li>
-                        <a href="{{ $menu['url'] }}">
-                            {{ $menu['name'] }}
+                        <a href="{{ $menu['url'] }}" class="{{ $active[0] == $menuKey ? 'active' : '' }}" href="{{ $menu['url'] }}">
+                            @if(app()->getLocale() == 'en')
+                                {{ $menu['name'] }}
+                            @else
+                                {{ $menu['name_de'] }}
+                            @endif
                         </a>
                     </li>
                 @else
                     <li class="has-dropdown">
-                        <a class="" href="javascript:void(0)">
-                            {{ $menu['name'] }}
+                        <a href="javascript:void(0)" class="{{ $active[0] == $menuKey ? 'active' : '' }}">
+                            @if(app()->getLocale() == 'en')
+                                {{ $menu['name'] }}
+                            @else
+                                {{ $menu['name_de'] }}
+                            @endif
                         </a>
                         <ul class="submenu">
                             @foreach($menu['children'] as $submenu)
                                 <li>
-                                    <a href="{{ $submenu['url'] }}">
-                                        {{ $submenu['name'] }}
+                                    <a href="{{ $submenu['url'] }}" class="{{ $active[1] == $subMenuKey ? 'active' : '' }}">
+                                        @if(app()->getLocale() == 'en')
+                                            {{ $submenu['name'] }}
+                                        @else
+                                            {{ $submenu['name_de'] }}
+                                        @endif
                                     </a>
                                 </li>
                             @endforeach
@@ -38,9 +50,16 @@
 
             <hr style="margin: 10px 0;">
 
+            <li>
+                <a href="{{ route('front.donate.index') }}" aria-expanded="false"  class="{{ $active[0] == 6 ? 'active' : '' }}">
+                    <i style="margin-right: 3px" class="fas fa-donate"></i>
+                    {{ __('front/master.donate_now') }}
+                </a>
+            </li>
+
             @if($user)
                 <li class="has-dropdown">
-                    <a href="javascript:void(0)" aria-expanded="false">
+                    <a href="javascript:void(0)" aria-expanded="false" class="{{ $active[0] == 8 ? 'active' : '' }}">
                         <i style="margin-right: 3px" class="far fa-user"></i>
                         @if(strlen($user->personalInfo->first_name) > 10)
                                 {{ substr($user->personalInfo->first_name, 0, 10) }}
@@ -51,12 +70,12 @@
                     <ul class="sub-menu mm-collapse" style="height: 0px;">
                         @if(\App\Helpers\AuthManager::isUser())
                             <li>
-                                <a href="{{ route('front.profile-account-info.index') }}">
+                                <a href="{{ route('front.profile-account-info.index') }}" class="{{ $active[0] == 8 && $active[1] == 0 ? 'active' : '' }}">
                                     My Profile
                                 </a>
                             </li>
                             <li>
-                                <a href="{{ route('front.profile-donation-history.index') }}">
+                                <a href="{{ route('front.profile-donation-history.index') }}" class="{{ $active[0] == 8 && $active[1] == 1 ? 'active' : '' }}">
                                     Donation History
                                 </a>
                             </li>
@@ -106,36 +125,5 @@
 
         </ul>
     </nav>
-    {{--<div class="offset-sidebar">
-        <div class="offset-widget offset-logo mb-30">
-            <a href="{{ route('front.index') }}">
-                <img src="{{ asset('front/img/logo/header_logo_one.png') }}" alt="">
-            </a>
-        </div>
-        <div class="offset-widget mb-40">
-            <div class="info-widget">
-                <h4 class="offset-title mb-20">About Us</h4>
-                <p class="mb-30">
-                    But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain
-                    was born and will give you a complete account of the system and expound the actual teachings of
-                    the great explore
-                </p>
-                <a class="theme_btn theme_btn_bg" href="#">
-                    Donate Now
-                    <span>
-                        <i class="fas fa-heart"></i>
-                    </span>
-                </a>
-            </div>
-        </div>
-        <div class="offset-widget mb-30 pr-10">
-            <div class="info-widget info-widget2">
-                <h4 class="offset-title mb-20">Contact Info</h4>
-                <p> <i class="fal fa-address-book"></i> 23/A, Miranda City Likaoli Prikano, Dope</p>
-                <p> <i class="fal fa-phone"></i> +0989 7876 9865 9 </p>
-                <p> <i class="fal fa-envelope-open"></i> info@example.com </p>
-            </div>
-        </div>
-    </div>--}}
 </aside>
 <div class="body-overlay"></div>

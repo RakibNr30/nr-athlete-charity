@@ -1,10 +1,10 @@
 @php
     $user = \Modules\Ums\Entities\User::find(auth()->user()->id);
 @endphp
-<div class="navbar navbar-expand-md navbar-dark fixed-top">
+<div class="navbar navbar-expand-md navbar-light fixed-top" style="background: #d9dedd;">
     <div class="navbar-brand">
         <a target="_blank" href="{{ route('front.index') }}" class="d-inline-block">
-            <img src="{{ $globalSite->logo->file_url ?? config('core.image.default.logo') }}" alt="">
+            <img src="{{ $globalSite->logo->file_url ?? config('core.image.default.logo') }}" style="height: 40px;" alt="">
         </a>
     </div>
 

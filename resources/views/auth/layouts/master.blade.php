@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ app()->getLocale() }}">
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 <head>
     <meta charset="utf-8">
@@ -27,10 +27,10 @@
 </head>
 
 <body>
-<div class="navbar navbar-expand-md navbar-dark">
+<div class="navbar navbar-expand-md navbar-light">
     <div class="navbar-brand">
         <a href="{{ route('front.index') }}" class="d-inline-block">
-            <img src="{{ $globalSite->logo->file_url ?? config('core.image.default.logo') }}" alt="">
+            <img src="{{ $globalSite->logo->file_url ?? config('core.image.default.logo') }}" style="height: 40px" alt="">
         </a>
     </div>
 </div>

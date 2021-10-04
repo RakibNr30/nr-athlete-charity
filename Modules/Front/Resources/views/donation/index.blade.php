@@ -1,4 +1,4 @@
-@extends('front.layouts.master')
+@extends('front.layouts.master', ['active' => [6, 0]])
 
 @section('title')
 @stop
@@ -10,12 +10,14 @@
             <div class="container">
                 <div class="row">
                     <div class="col-xl-6 offset-xl-3">
-                        <div class="page-title-wrapper text-center pt-125">
+                        <div class="page-title-wrapper text-center pt-60">
                             <div class="page-title-box">
-                                <h2 class="page-title">Donate Now</h2>
+                                <h2 class="page-title">
+                                    <span>{{ __('front/donate/index.donate') }}</span>
+                                </h2>
                                 <ul class="breadcrumb-list">
                                     <li><a href="{{ route('front.index') }}">Home <i class="far fa-chevron-right"></i></a></li>
-                                    <li><a class="active">Donate Now</a></li>
+                                    <li><a class="active">{{ __('front/donate/index.donate_now') }}</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -37,7 +39,7 @@
                                     {{ $data->counter->totalAthlete ?? 0 }}
                                 </span>
                             </h1>
-                            <p>Total Athlete</p>
+                            <p>{{ __('front/donate/index.total_athlete') }}</p>
                         </div>
                     </div>
                     {{--<div class="col-xl-3 col-lg-3 col-md-3 col-sm-6">
@@ -57,7 +59,7 @@
                                     {{ $data->counter->totalDonation ?? 0 }}
                                 </span>
                             </h1>
-                            <p>Total Donation</p>
+                            <p>{{ __('front/donate/index.total_donation') }}</p>
                         </div>
                     </div>
                     <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
@@ -69,7 +71,7 @@
                                 {{ $data->counter->latestRicePrice ?? 0 }}
                             </span>
                             </h1>
-                            <p>Rice Price (per kg)</p>
+                            <p>{{ __('front/donate/index.rice_price') }}</p>
                         </div>
                     </div>
                 </div>
@@ -102,7 +104,11 @@
                                                     <p class="text-black-50 text-left light-black" style="font-size: 12px">Distance
                                                         <span class="font-weight-bold d-block" style="font-size: 18px; line-height: 8px">
                                                             @if(isset($lastActivity->distance))
-                                                                {{ $lastActivity->distance ?? 0 }} m
+                                                                @if($lastActivity->distance < 1000)
+                                                                    {{ round($lastActivity->distance/1000, 4) }} km
+                                                                @else
+                                                                    {{ round($lastActivity->distance/1000, 2) }} km
+                                                                @endif
                                                             @else
                                                                 0
                                                             @endif
@@ -113,7 +119,7 @@
                                                     <p class="text-black-50 text-left light-black" style="font-size: 12px">Time
                                                         <span class="font-weight-bold d-block" style="font-size: 18px; line-height: 8px">
                                                             @if(isset($lastActivity->moving_time))
-                                                                {{ $lastActivity->moving_time ?? 0 }} s
+                                                                {{ round($lastActivity->moving_time/60, 2) }} min
                                                             @else
                                                                 0
                                                             @endif
@@ -124,7 +130,11 @@
                                                     <p class="text-black-50 text-left light-black" style="font-size: 12px">Speed
                                                         <span class="font-weight-bold d-block" style="font-size: 18px; line-height: 8px">
                                                             @if(isset($lastActivity->average_speed))
-                                                                {{ $lastActivity->average_speed ?? 0 }} m/s
+                                                                @if($lastActivity->average_speed < 1)
+                                                                    {{ round($lastActivity->average_speed * 0.06, 4) }} km/min
+                                                                @else
+                                                                    {{ round($lastActivity->average_speed * 0.06, 2) }} km/min
+                                                                @endif
                                                             @else
                                                                 0
                                                             @endif
@@ -134,11 +144,9 @@
                                             </div>
                                         </div>
                                     </div>
-                                    @if(isset($lastActivity->map->summary_polyline))
-                                        <div class="activity-map-area mb-2 ml-3 mr-3">
-                                            <div id="map"></div>
-                                        </div>
-                                    @endif
+                                    <div class="activity-map-area mb-2 ml-3 mr-3">
+                                        <div id="map"></div>
+                                    </div>
                                     <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
                                         <div class="counetrs statistics pos-rel mb-0 grey-bg2 text-center wow fadeInUp2 animated" data-wow-delay=".2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp2;">
                                             <div class="counetrs__icon mb-20"><i class="flaticon-calories"></i></div>
@@ -151,7 +159,7 @@
                                                     @endif
                                                 </span>
                                             </h1>
-                                            <p>Calories (kCal)</p>
+                                            <p>{{ __('front/donate/index.calories') }} (kCal)</p>
                                         </div>
                                     </div>
                                     <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
@@ -166,7 +174,7 @@
                                                     @endif
                                                 </span>
                                             </h1>
-                                            <p>Rice (kg)</p>
+                                            <p>{{ __('front/donate/index.rice') }} (kg)</p>
                                         </div>
                                     </div>
                                 </div>
@@ -174,26 +182,92 @@
 
                             <div class="doante-select-area donate-select-area-04 mb-30 text-center white-bg wow fadeInUp2 animated" data-wow-delay=".1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp2;">
                                 <div class="section-title text-left mb-45">
-                                    <h3>Raise Your Hand To Right<br>
-                                        Place Or Foundation</h3>
+                                    <h3>{{ __('front/donate/index.raise_your_hand') }}</h3>
                                 </div>
                                 <div class="donate-cart pos-rel mb-10">
                                     <form class="donate-btn pos-rel" action="#">
                                         <input type="text" id="donate_amount" value="&#128;{{ round($data->ricePrice, 2) }}" readonly>
                                     </form>
                                 </div>
-                                {!! Form::open(['url' => route('make.payment'), 'method' => 'post']) !!}
-                                <div class="mb-10">
-                                    <select name="case_id" class="donate-select donate-select2">
-                                        <option value="0">Donate for all</option>
-                                        @foreach($data->allCases as $index => $case)
-                                            <option value="{{ $case->id }}" {{ old('case_id') == $case->id ? 'selected' : (request()->get('case') == $case->id ? 'selected' : '') }}>
-                                                {{ $case->title }}
-                                            </option>
-                                        @endforeach
-                                    </select>
+
+                                <select name="case_id" class="donate-select donate-select2" id="case_id" onchange="setCase()">
+                                    <option value="0">{{ __('front/donate/index.donate_for_all') }}</option>
+                                    @foreach($data->allCases as $index => $case)
+                                        <option value="{{ $case->id }}" {{ old('case_id') == $case->id ? 'selected' : (request()->get('case') == $case->id ? 'selected' : '') }}>
+                                            {{ $case->title }}
+                                        </option>
+                                    @endforeach
+                                </select>
+                            </div>
+
+                            <div class="doante-select-area donate-select-area-04 mb-30 text-center white-bg wow fadeInUp2 animated" data-wow-delay=".1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp2;">
+                                <div class="section-title text-left">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <h3 class="d-inline">{{ __('front/donate/index.card_details') }}</h3>
+                                            <img src="{{ asset('front/images/logo/cards.png') }}" class="cards-icon">
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="mt-30">
+                                <div class="">
+                                    <div class="panel-body">
+                                        <br>
+                                        <form role="form" action="{{ route('stripe.make.payment') }}" method="post" class="require-validation" data-cc-on-file="false" data-stripe-publishable-key="{{ \Modules\Setting\Entities\Api::firstOrCreate([])->stripe_key ?? '' }}" id="payment-form">
+                                            @csrf
+                                            <input type="hidden" name="case_id" id="case_id_f1" value="{{ request()->get('case') ?? 0 }}">
+                                            <input type="hidden" name="donate_amount" value="{{ round($data->ricePrice, 2) }}">
+                                            @if(isset($lastActivity->id))
+                                                <input type="hidden" name="activity_id" value="{{ $lastActivity->id }}">
+                                            @endif
+                                            <input type="hidden" name="rice_donate_amount" value="{{ round($data->rices, 2) }}" readonly>
+
+                                            <div class='row donate-cart donate-cart-01'>
+                                                <div class='col-xs-12 col-md-6 form-group donate-btn required'>
+                                                    <input class='form-control' size='4' type='text' placeholder="Name on Card">
+                                                </div>
+                                                <div class='col-xs-12 col-md-6 form-group donate-btn required'>
+                                                    <input autocomplete='off' class='form-control card-number' size='20' type='text' placeholder="Card Number">
+                                                </div>
+                                            </div>
+                                            <div class='row donate-cart donate-cart-01'>
+                                                <div class='col-xs-12 col-md-4 form-group donate-btn cvc required'>
+                                                    <input autocomplete='off' class='form-control card-cvc' placeholder='CVC' size='4' type='text'>
+                                                </div>
+                                                <div class='col-xs-12 col-md-4 form-group donate-btn expiration required'>
+                                                    <input class='form-control card-expiry-month' placeholder='MM' size='2' type='text'>
+                                                </div>
+                                                <div class='col-xs-12 col-md-4 form-group donate-btn expiration required'>
+                                                    <input class='form-control card-expiry-year' placeholder='YYYY' size='4' type='text'>
+                                                </div>
+                                            </div>
+                                            <div class='row'>
+                                                <div class='col-md-12 error form-group hide'>
+                                                    <div class='alert-danger alert'>Please correct the errors and try
+                                                        again.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-row row">
+                                                <div class="col-xs-12 w-100">
+                                                    @if(round($data->ricePrice, 2) == 0)
+                                                        <button class="theme_btn theme_btn_bg w-100" type="submit" style="background: #f15b43; !important;" disabled>{{ __('front/donate/index.pay_now') }}</button>
+                                                    @else
+                                                        <button class="theme_btn theme_btn_bg w-100" type="submit" style="background: #f15b43 !important;">{{ __('front/donate/index.pay_now') }}</button>
+                                                    @endif
+                                                    {{--<button class="theme_btn theme_btn_bg w-100" type="submit">Pay Now (&euro;{{ ceil($data->ricePrice) }}.00)</button>--}}
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+
+                                <div class="mt-10">
+                                    - OR -
+                                </div>
+
+                                {!! Form::open(['url' => route('make.payment'), 'method' => 'post']) !!}
+                                <div class="mt-10">
+                                    <input type="hidden" name="case_id" id="case_id_f2" value="{{ request()->get('case') ?? 0 }}">
                                     <input type="hidden" name="donate_amount" value="{{ round($data->ricePrice, 2) }}">
                                     @if(isset($lastActivity->id))
                                         <input type="hidden" name="activity_id" value="{{ $lastActivity->id }}">
@@ -201,23 +275,24 @@
                                     <input type="hidden" name="rice_donate_amount" value="{{ round($data->rices, 2) }}" readonly>
                                     @if(round($data->ricePrice, 2) == 0)
                                         <button class="theme_btn theme_btn_bg w-100" disabled>
-                                            <i class="fab fa-paypal"></i> Pay with PayPal
+                                            <i class="fab fa-paypal"></i> {{ __('front/donate/index.pay_now_with_paypal') }}
                                         </button>
                                     @else
                                         <button class="theme_btn theme_btn_bg w-100">
-                                            <i class="fab fa-paypal"></i> Pay with PayPal
+                                            <i class="fab fa-paypal"></i> {{ __('front/donate/index.pay_now_with_paypal') }}
                                         </button>
                                     @endif
                                 </div>
                                 {!! Form::close() !!}
                             </div>
+
                         </div>
                     </div>
                     <div class="col-xl-4 col-lg-4 col-md-12">
                         <div class="details-right-area">
                             <div class="widget white-bg mb-30">
                                 <div class="widget-post">
-                                    <h3 class="cases-title mb-30">Popular Cases</h3>
+                                    <h3 class="cases-title mb-30">{{ __('front/donate/index.popular_cases') }}</h3>
                                     @if(count($data->cases))
                                         @foreach($data->cases as $index => $case)
                                             <div class="post d-flex align-items-center mb-20">
@@ -292,6 +367,30 @@
         .select2-selection__arrow {
             height: 60px;
         }
+        .hide {
+            display: none;
+        }
+        .cards-icon {
+            height: 25px;
+            margin-left: 10px;
+            margin-top: -10px;
+        }
+        @media only screen and (max-width: 380px) {
+            .cards-icon {
+                display: block;
+                height: 25px;
+                margin-left: 0;
+                margin-top: 10px;
+            }
+        }
+        .doante-select-area .donate-cart-01 {
+            height: unset;
+            display: flex;
+            width: unset;
+        }
+        .doante-select-area .donate-cart-01 input {
+            font-size: 15px;
+        }
     </style>
 @stop
 
@@ -302,6 +401,13 @@
     <script src="{{ asset('common/plugins/select2/js/select2.full.min.js') }}"></script>
     <script>
         $('.donate-select2').select2();
+
+        function setCase() {
+            var caseId = $('#case_id').val();
+            $('#case_id_f1').val(caseId);
+            $('#case_id_f2').val(caseId);
+        }
+
     </script>
     <script>
         function setupMap() {
@@ -440,5 +546,54 @@
             io.value = str;
             io.setSelectionRange(selectionStart, selectionEnd);
         }
+    </script>
+
+    <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+    <script type="text/javascript">
+        $(function() {
+            var $form = $(".require-validation");
+            $('form.require-validation').bind('submit', function(e) {
+                var $form = $(".require-validation"),
+                    inputSelector = ['input[type=email]', 'input[type=password]', 'input[type=text]', 'input[type=file]', 'textarea'].join(', '),
+                    $inputs = $form.find('.required').find(inputSelector),
+                    $errorMessage = $form.find('div.error'),
+                    valid = true;
+                $errorMessage.addClass('hide');
+                $('.has-error').removeClass('has-error');
+                $inputs.each(function(i, el) {
+                    var $input = $(el);
+                    if ($input.val() === '') {
+                        $input.parent().addClass('has-error');
+                        $errorMessage.removeClass('hide');
+                        e.preventDefault();
+                    }
+                });
+                if (!$form.data('cc-on-file')) {
+                    e.preventDefault();
+                    Stripe.setPublishableKey($form.data('stripe-publishable-key'));
+                    Stripe.createToken({
+                        number: $('.card-number').val(),
+                        cvc: $('.card-cvc').val(),
+                        exp_month: $('.card-expiry-month').val(),
+                        exp_year: $('.card-expiry-year').val()
+                    }, stripeResponseHandler);
+                }
+            });
+
+            function stripeResponseHandler(status, response) {
+                if (response.error) {
+                    $('.error')
+                        .removeClass('hide')
+                        .find('.alert')
+                        .text(response.error.message);
+                } else {
+                    /* token contains id, last4, and card type */
+                    var token = response['id'];
+                    $form.find('input[type=text]').empty();
+                    $form.append("<input type='hidden' name='stripeToken' value='" + token + "'/>");
+                    $form.get(0).submit();
+                }
+            }
+        });
     </script>
 @stop

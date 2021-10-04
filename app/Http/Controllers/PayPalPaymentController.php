@@ -2,25 +2,50 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Session;
 use Modules\Cms\Entities\Donation;
 use Modules\Cms\Services\CasesService;
 use Modules\Cms\Services\DonationService;
+use Modules\Setting\Services\ApiService;
 use Srmklive\PayPal\Services\ExpressCheckout;
 
 class PayPalPaymentController extends Controller
 {
     protected $donationService;
     protected $casesService;
+    protected $apiService;
 
-    public function __construct(DonationService $donationService, CasesService $casesService)
+    public function __construct
+    (
+        DonationService $donationService,
+        CasesService $casesService,
+        ApiService $apiService
+    )
     {
         $this->donationService = $donationService;
         $this->casesService = $casesService;
+        $this->apiService = $apiService;
     }
 
     public function handlePayment(Request $request)
     {
+        $apiCredentials = $this->apiService->firstOrCreate([]);
+        $config = [
+            'mode'    => env('PAYPAL_MODE', 'sandbox'),
+            'sandbox' => [
+                'username'    => $apiCredentials->sandbox_username ?? '',
+                'password'    => $apiCredentials->sandbox_password ?? '',
+                'secret'      => $apiCredentials->sandbox_secret ?? '',
+                'certificate' => $apiCredentials->sandbox_certificate ?? '',
+                'app_id'      => $apiCredentials->sandbox_app_id ?? '',
+            ],
+            'payment_action' => 'Sale',
+            'currency'       => $apiCredentials->currency ?? 'EUR',
+            'billing_type'   => 'MerchantInitiatedBilling',
+            'notify_url'     => '',
+            'locale'         => '',
+            'validate_ssl'   => true,
+        ];
+
         $data = $request->all();
         $request->session()->put('requested', $data);
 
@@ -40,17 +65,28 @@ class PayPalPaymentController extends Controller
         $product['cancel_url'] = route('cancel.payment');
         $product['total'] = $product['items'][0]['price'] * $product['items'][0]['qty'];
 
-        $paypalModule = new ExpressCheckout;
+        $provider = new ExpressCheckout;
 
         try {
-            $res = $paypalModule->setExpressCheckout($product);
+            $provider->setApiCredentials($config);
         } catch (\Exception $e) {}
 
         try {
-            $res = $paypalModule->setExpressCheckout($product, true);
+            $res = $provider->setExpressCheckout($product);
         } catch (\Exception $e) {}
 
-        return redirect($res['paypal_link']);
+        try {
+            $res = $provider->setExpressCheckout($product, true);
+        } catch (\Exception $e) {}
+
+        if ($res['ACK'] == 'Success')
+        {
+            return redirect($res['paypal_link']);
+        }
+
+        // flash notification
+        notifier()->error('Your donation was not success due to technical issue');
+        return redirect()->back();
     }
 
     public function paymentCancel()
@@ -62,9 +98,9 @@ class PayPalPaymentController extends Controller
 
     public function paymentSuccess(Request $request)
     {
-        $paypalModule = new ExpressCheckout;
+        $provider = new ExpressCheckout;
         try {
-            $response = $paypalModule->getExpressCheckoutDetails($request->token);
+            $response = $provider->getExpressCheckoutDetails($request->token);
         } catch (\Exception $e) {}
 
         if (in_array(strtoupper($response['ACK']), ['SUCCESS', 'SUCCESSWITHWARNING'])) {

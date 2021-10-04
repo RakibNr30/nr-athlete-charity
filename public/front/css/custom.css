@@ -1,12 +1,120 @@
-body {
+@font-face {
+    font-family:dosis-webfont;
+    font-weight:400;
+    font-style:normal;
+    font-stretch:normal;
+    src:
+        url(../fonts/dosis-regular-webfont-7926b94d6e.woff2) format('woff2'),
+        url(../fonts/dosis-regular-webfont-0801a2ca93.woff) format('woff'),
+        url(../fonts/dosis-regular-webfont-3a79314ad1.ttf) format('truetype');
+    unicode-range:U+0100-024F,U+1E00-1EFF,U+20A0-20AB,U+20AD-20CF,U+2C60-2C7F,U+A720-A7FF
+}
 
+@font-face {
+    font-family:dosis-webfont;
+    font-weight:400;
+    font-style:normal;
+    font-stretch:normal;
+    src:
+        url(../fonts/dosis-regular-webfont-7926b94d6e.woff2) format('woff2'),
+        url(../fonts/dosis-regular-webfont-0801a2ca93.woff) format('woff'),
+        url(../fonts/dosis-regular-webfont-3a79314ad1.ttf) format('truetype');
+    unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2212,U+2215,U+E0FF,U+EFFD,U+F000
+}
+
+@font-face {
+    font-family:pt-sans;
+    src:
+        url(../fonts/pt-sans-webfont-44fd9abb6e.woff2) format('woff2'),
+        url(../fonts/pt-sans-webfont-3b13838594.woff) format('woff'),
+        url(../fonts/pt-sans-webfont-16c30b8d03.ttf) format('truetype');
+    font-weight:400;
+    font-style:normal;
+    font-stretch:normal
+}
+
+@font-face {
+    font-family:pt-sans-italic;
+    src:
+        url(../fonts/pt-sans-webfont-italic-f8f129875f.woff2) format('woff2'),
+        url(../fonts/pt-sans-webfont-italic-e32091d6de.woff) format('woff'),
+        url(../fonts/pt-sans-webfont-italic-1ec0e7a655.ttf) format('truetype');
+    font-weight:400;
+    font-style:normal;
+    font-stretch:normal
+}
+
+@font-face {
+    font-family:noto-sans-kr-regular;
+    font-weight:400;
+    font-style:normal;
+    font-stretch:normal;
+    src:
+        url(../fonts/NotoSansKR-Regular-81a7c1564e.woff2) format('woff2'),
+        url(../fonts/NotoSansKR-Regular-12ef6e41b0.woff) format('woff'),
+        url(../fonts/NotoSansKR-Regular-b9dc40714e.ttf) format('truetype')
+}
+
+@font-face {
+    font-family:noto-sans-kr-medium;
+    font-weight:400;
+    font-style:normal;
+    font-stretch:normal;
+    src:
+        url(../fonts/NotoSansKR-Medium-232de06c67.woff2) format('woff2'),
+        url(../fonts/NotoSansKR-Medium-8faa956686.woff) format('woff'),
+        url(../fonts/NotoSansKR-Medium-427656ed49.ttf) format('truetype')
+}
+
+@font-face {
+    font-family:noto-sans-jp-regular;
+    font-weight:400;font-style:normal;
+    font-stretch:normal;
+    src:
+        url(../fonts/NotoSansJP-Regular-e37b998f0a.woff2) format('woff2'),
+        url(../fonts/NotoSansJP-Regular-d5713c2d91.woff) format('woff'),
+        url(../fonts/NotoSansJP-Regular.ttf) format('truetype')
+}
+
+@font-face {
+    font-family:noto-sans-jp-medium;
+    font-weight:400;
+    font-style:normal;
+    font-stretch:normal;
+    src:
+        url(../fonts/NotoSansJP-Medium-92cd798e2d.woff2) format('woff2'),
+        url(../fonts/NotoSansJP-Medium-9a7d4f3eb7.woff) format('woff'),
+        url(../fonts/NotoSansJP-Medium.ttf) format('truetype')
+}
+
+body {
+    /font-family: dosis-webfont,Dosis,'Arial Narrow','Lucida Grande','Lucida Sans Unicode','Lucida Sans',Tahoma,sans-serif;
+}
+#top-menu {
+    margin-top: -92px;
 }
 .page-title-area {
-    min-height: 300px;
+    min-height: 230px;
+    margin-top: 92px;
+}
+@media only screen and (max-width: 991px){
+    #top-menu {
+        margin-top: -97px;
+    }
+    .page-title-area {
+        margin-top: 97px;
+    }
 }
 @media only screen and (max-width: 767px){
+    #top-menu {
+        margin-top: -77px;
+    }
     .page-title-area {
-        min-height: 240px;
+        margin-top: 77px;
+        min-height: 165px;
+    }
+    .profile-dropdown {
+        padding-top: 27px !important;
     }
 }
 .section-title h2 {
@@ -319,6 +427,18 @@ ul.widget-cat .active a {
 }
 .page-title-wrapper .page-title {
     color: #001234;
+    font-size: 70px;
+}
+@media only screen and (max-width: 767px){
+    .page-title-wrapper .page-title {
+        font-size: 32px;
+    }
+    ul.breadcrumb-list li a {
+        font-size: 18px;
+    }
+    .page-title-area .page-title-wrapper.pt-60 {
+        padding-top: 50px !important;
+    }
 }
 ul.breadcrumb-list li a {
     color: #001234;
@@ -365,6 +485,34 @@ ul.breadcrumb-list li a {
 .cases--author .semi-02-title {
     font-size: 20px !important;
 }
-.footer__widget .fot-list li a::before {
+.footer-area .footer__widget .fot-list li a::before {
     top: 2px;
+}
+.footer-area .footer__widget {
+    text-align: center;
+}
+.footer-area .widget_address__icon i {
+    font-size: 30px;
+}
+.footer-area .footer__widget .semi-02-title.contact {
+    font-size: 20px;
+}
+.page-title-area .page-title-wrapper .page-title span {
+    background: #fff;
+    opacity: 0.8;
+    padding: 0 20px;
+    border-radius: 10px;
+    padding-bottom: 5px;
+}
+.page-title-area ul.breadcrumb-list {
+    background: #fff;
+    opacity: 0.8;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+.main-menu ul li > a:hover,
+.main-menu ul li > a.active,
+.side-mobile-menu ul li a:hover,
+.side-mobile-menu ul li a.active{
+    color: #f15b43 !important;
 }

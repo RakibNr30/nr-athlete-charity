@@ -79,3 +79,21 @@ select[data-fouc]:not([aria-hidden=false]) {
     background-repeat: no-repeat;
     background-position: center;
 }
+.page-content {
+    margin-top: 24px;
+}
+.sidebar-expand-md.sidebar-main .sidebar-content {
+    margin-top: 24px;
+}
+.dropdown-user .navbar-nav-link, .dropdown-user .navbar-nav-link>span {
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+@media only screen and (max-width: 767px) {
+    .sidebar-expand-md.sidebar-main .sidebar-content {
+        margin-top: 0;
+    }
+    .navbar-toggler {
+        padding: 25px 0;
+    }
+}

@@ -1,4 +1,4 @@
-@extends('front.layouts.master')
+@extends('front.layouts.master', ['active' => [5, 0]])
 
 @section('title')
 @stop
@@ -10,12 +10,14 @@
             <div class="container">
                 <div class="row">
                     <div class="col-xl-8 offset-xl-2">
-                        <div class="page-title-wrapper text-center pt-125">
+                        <div class="page-title-wrapper text-center pt-60">
                             <div class="page-title-box">
-                                <h2 class="page-title">Contact Us</h2>
+                                <h2 class="page-title">
+                                    <span>{{ __('front/contact/index.contact') }}</span>
+                                </h2>
                                 <ul class="breadcrumb-list">
                                     <li><a href="{{ route('front.index') }}">Home <i class="far fa-chevron-right"></i></a></li>
-                                    <li><a class="active">Contact Us</a></li>
+                                    <li><a class="active">{{ __('front/contact/index.contact') }}</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -23,16 +25,15 @@
                 </div>
             </div>
         </section>
-        <!--page-title-area end-->
-        <!--join-team-area start-->
+
         <section class="contacts-details-area grey-bg2 pt-130 pb-100">
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-xl-5 col-lg-6 col-md-6">
                         <div class="get-touch-area pl-50 pr-50">
                             <div class="section-title text-left mb-30 wow fadeInUp2 animated" data-wow-delay='.1s'>
-                                <h6>Get In Touch</h6>
-                                <h2>Don’t Hesited To Contact Us</h2>
+                                <h6>{{ __('front/contact/index.get_in_touch') }}</h6>
+                                <h2>{{ __('front/contact/index.dont_hesited_to_contact_us') }}</h2>
                             </div>
                             @if(isset($data->contact->phone))
                                 <div class="contacts d-flex align-items-center mb-30">
@@ -40,7 +41,7 @@
                                         <i class="flaticon-phone-call"></i>
                                     </div>
                                     <div class="contacts__text">
-                                        <h4 class="semi-02-title">Phone Number</h4>
+                                        <h4 class="semi-02-title">{{ __('front/contact/index.phone_number') }}</h4>
                                         <h5>{{ $data->contact->phone }}</h5>
                                     </div>
                                 </div>
@@ -51,7 +52,7 @@
                                         <i class="flaticon-chat"></i>
                                     </div>
                                     <div class="contacts__text">
-                                        <h4 class="semi-02-title">Email Address</h4>
+                                        <h4 class="semi-02-title">{{ __('front/contact/index.email_address') }}</h4>
                                         <h5>{{ $data->contact->email }}</h5>
                                     </div>
                                 </div>
@@ -62,7 +63,7 @@
                                         <i class="flaticon-location"></i>
                                     </div>
                                     <div class="contacts__text">
-                                        <h4 class="semi-02-title">Our Location</h4>
+                                        <h4 class="semi-02-title">{{ __('front/contact/index.our_location') }}</h4>
                                         <h5>{{ $data->contact->address }}</h5>
                                     </div>
                                 </div>
@@ -72,28 +73,54 @@
                     <div class="col-xl-7 col-lg-6 col-md-6">
                         <div class="donar-information donation-form grey-bg2 mb-30 pr-50 pl-50">
                             <div class="section-title text-left mb-50 wow fadeInUp2 animated" data-wow-delay='.1s'>
-                                <h6>Send Message</h6>
-                                <h2>Feel Free To Write
-                                    Us Message.</h2>
+                                <h6>{{ __('front/contact/index.send_message') }}</h6>
+                                <h2>{{ __('front/contact/index.feel_free_to_write_us_message') }}</h2>
                             </div>
                             <div class="main-contact-area">
-                                <form action="#">
+                                @include('front.partials._alert')
+                                {!! Form::open(['url' => route('front.contact.store'), 'method' => 'contact']) !!}
                                     <div class="input-area mb-10">
-                                        <input type="text" class="form-control" placeholder="Your Name">
+                                        <div class="form-group">
+                                            <input id="name" name="name" value="{{ old('name') }}" type="text"
+                                                   class="form-control @error('name') is-invalid @enderror"
+                                                   placeholder="{{ __('front/contact/index.your_name') }}" autofocus>
+                                            @error('name')
+                                            <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>
+                                            @enderror
+                                        </div>
                                     </div>
                                     <div class="input-area mb-10">
-                                        <input type="text" class="form-control" placeholder="Email Address">
+                                        <div class="form-group">
+                                            <input id="email" name="email" value="{{ old('email') }}" type="email"
+                                                   class="form-control @error('email') is-invalid @enderror"
+                                                   placeholder="{{ __('front/contact/index.email_address') }}" autofocus>
+                                            @error('email')
+                                            <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>
+                                            @enderror
+                                        </div>
                                     </div>
                                     <div class="input-area mb-10">
-                                        <input type="text" class="form-control" placeholder="Your Location/ City">
+                                        <div class="form-group">
+                                            <input id="address" name="address" value="{{ old('address') }}" type="text"
+                                                   class="form-control @error('address') is-invalid @enderror"
+                                                   placeholder="{{ __('front/contact/index.your_location') }}" autofocus>
+                                            @error('address')
+                                            <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>
+                                            @enderror
+                                        </div>
                                     </div>
                                     <div class="input-area mb-10">
-                                        <textarea name="message" id="messsage" cols="30" rows="10" placeholder="Message"></textarea>
+                                        <div class="form-group">
+                                            <textarea id="message" name="message" class="@error('message') is-invalid @enderror" cols="30" rows="10" placeholder="{{ __('front/contact/index.message') }}">{{ old('message') }}</textarea>
+                                            @error('message')
+                                            <span class="invalid-feedback" style="display: block" role="alert"><strong>{{ $message }}</strong></span>
+                                            @enderror
+                                        </div>
                                     </div>
                                     <div class="input-btn">
-                                        <button class="theme_btn theme_btn_bg large_btn" disabled>Send message</button>
+                                        <button class="theme_btn theme_btn_bg large_btn">{{ __('front/contact/index.send_message') }}</button>
                                     </div>
-                                </form>
+                                {!! Form::close() !!}
                             </div>
                         </div>
                     </div>
