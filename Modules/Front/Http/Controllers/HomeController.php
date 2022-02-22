@@ -2,6 +2,7 @@
 
 namespace Modules\Front\Http\Controllers;
 
+use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Modules\Cms\Services\DashboardService;
 use Modules\Front\Services\HomeService;

@@ -186,7 +186,8 @@
                                 </div>
                                 <div class="donate-cart pos-rel mb-10">
                                     <form class="donate-btn pos-rel" action="#">
-                                        <input type="text" id="donate_amount" value="&#128;{{ round($data->ricePrice, 2) }}" readonly>
+                                        <input type="text" id="donate_amount" class="input-2x" value="&#128;{{ round($data->ricePrice, 2) }}" readonly>
+                                        <a onclick="make2x(this.id, 'donate_amount')" id="make2xbtn" class="btn btn-2x">2X</a>
                                     </form>
                                 </div>
 
@@ -391,6 +392,26 @@
         .doante-select-area .donate-cart-01 input {
             font-size: 15px;
         }
+        .btn-2x {
+            width: 20%;
+            display: inline-block;
+            height: 64px;
+            border: 1px solid #e4e4e4;
+            border-radius: 0;
+            color: #fff !important;
+            background: #f15c44;
+            font-size: 30px;
+            font-family: "Barlow Condensed", sans-serif;
+            font-weight: 600;
+        }
+        .btn-2x:hover {
+            color: #000 !important;
+        }
+        .input-2x {
+            width: 80% !important;
+            display: inline-block !important;
+            float: left;
+        }
     </style>
 @stop
 
@@ -407,7 +428,24 @@
             $('#case_id_f1').val(caseId);
             $('#case_id_f2').val(caseId);
         }
+        function make2x(btn, id) {
+            let donate_amount = document.getElementById(id).value;
+            let amount2x = (donate_amount.substr(1, donate_amount.length - 1) * 2).toFixed(2);
+            document.getElementById(id).value = '€' + amount2x;
+            document.getElementById(btn).style.pointerEvents = "none";
 
+            let rice2x = document.querySelector('input[name="rice_donate_amount"]').getAttribute("value") * 2;
+
+            let amounts = document.querySelectorAll('input[name="donate_amount"]');
+            let rices = document.querySelectorAll('input[name="rice_donate_amount"]');
+
+            amounts.forEach(function (amount) {
+                amount.setAttribute("value", amount2x);
+            });
+            rices.forEach(function (rice) {
+                rice.setAttribute("value", rice2x);
+            });
+        }
     </script>
     <script>
         function setupMap() {
@@ -596,4 +634,36 @@
             }
         });
     </script>
+
+    <script src="{{ asset('common/plugins/canvas/js/canvas2image.js') }}"></script>
+    <script src="{{ asset('common/plugins/canvas/js/html2canvas.min.js') }}"></script>
+
+    {{--
+    <script src="https://superal.github.io/canvas2image/canvas2image.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+    --}}
+
+    <script>
+        html2canvas(document.querySelector('#ssDiv'), {
+            onrendered: function(canvas) {
+                Canvas2Image.saveAsPNG(canvas);
+                let imgData = canvas.toDataURL("image/png");
+
+                $.ajax({
+                    method: 'POST',
+                    url: 'donate/store',
+                    data: {
+                        _token: '{{ csrf_token() }}',
+                        image: imgData
+                    },
+                    success: function (res) {
+                        document.querySelector('meta[property="og:image"]').setAttribute("content", res.path);
+                        document.querySelector('meta[name="twitter:image"]').setAttribute("content", res.path);
+                        document.getElementById('download-ss').href = res.path;
+                    }
+                })
+            }
+        });
+    </script>
+
 @stop

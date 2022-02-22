@@ -6,6 +6,7 @@ use Modules\Cms\Entities\Donation;
 use Modules\Cms\Services\CasesService;
 use Modules\Cms\Services\DonationService;
 use Modules\Setting\Services\ApiService;
+use PhpOffice\PhpSpreadsheet\Shared\StringHelper;
 use Srmklive\PayPal\Services\ExpressCheckout;
 
 class PayPalPaymentController extends Controller
@@ -79,7 +80,7 @@ class PayPalPaymentController extends Controller
             $res = $provider->setExpressCheckout($product, true);
         } catch (\Exception $e) {}
 
-        if ($res['ACK'] == 'Success')
+        if (isset($res['ACK']) && $res['ACK'] == 'Success')
         {
             return redirect($res['paypal_link']);
         }
@@ -103,7 +104,7 @@ class PayPalPaymentController extends Controller
             $response = $provider->getExpressCheckoutDetails($request->token);
         } catch (\Exception $e) {}
 
-        if (in_array(strtoupper($response['ACK']), ['SUCCESS', 'SUCCESSWITHWARNING'])) {
+        if (isset($response['ACK']) && in_array(strtoupper($response['ACK']), ['SUCCESS', 'SUCCESSWITHWARNING'])) {
             $data = $request->session()->get('requested');
             $data['donner_id'] = auth()->user()->id;
             $data['token'] = $request->get('token');
@@ -129,9 +130,13 @@ class PayPalPaymentController extends Controller
                 }
             }
 
+            $donation = new \stdClass();
+            $donation->case = $case;
+            $donation->amount = $data['donate_amount'];
+
             // flash notification
             notifier()->success('Your donation is successful');
-            return redirect()->route('front.donate.index');
+            return redirect()->route('front.donate.index')->with(['data' => $donation]);
         }
 
         // flash notification

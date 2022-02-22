@@ -5,7 +5,9 @@ namespace Modules\Front\Http\Controllers;
 use Carbon\Carbon;
 use CodeToad\Strava\Strava;
 use GuzzleHttp\Client;
+use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
+use Intervention\Image\Image;
 use Modules\Cms\Services\CasesService;
 use Modules\Cms\Services\DashboardService;
 use Modules\Cms\Services\RiceService;
@@ -93,12 +95,34 @@ class DonationController extends Controller
 
         // rices in kg
         $data->rices = $data->calories * 0.00077;
+        //$data->rices = 10000 * 0.00077;
 
         // rice price
         $data->ricePrice = $data->rices * $rice->global_avg_price;
+        //$data->ricePrice = $data->rices * 1.4;
 
         //dd($data);
 
         return view('front::donation.index', compact('lastActivity', 'data'));
+    }
+
+    public function store(Request $request) {
+        $data = $request->all();
+
+        $file = substr($data['image'], strpos($data['image'], ",") + 1);
+        $file = base64_decode($file);
+
+        $image_name = "ss-".time().".png";
+        $server_path = '/app/public/screenshoots/' . $image_name;
+        $path = storage_path(). $server_path;
+
+        file_put_contents($path, $file);
+
+        $response = [
+            'status' => 'success',
+            'path' => env('DOMAIN') . '/storage/screenshoots/' . $image_name
+        ];
+
+        return response()->json($response, 200);
     }
 }

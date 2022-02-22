@@ -3,7 +3,16 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>{{ $globalSite->title ?? 'Athlete Charity' }}</title>
+    <meta property="og:image">
+    <meta name="twitter:card" content="">
+    <meta name="twitter:site" content="">
+    <meta name="twitter:title" content="{{ $globalSite->title ?? 'DYCER' }}">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:creator" content="">
+    <meta name="twitter:image">
+    <meta name="twitter:domain" content="">
+
+    <title>{{ $globalSite->title ?? 'DYCER' }}</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/x-icon" href="{{ $globalSite->favicon->file_url ?? config('core.image.default.favicon') }}">

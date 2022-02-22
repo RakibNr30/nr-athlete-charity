@@ -18,6 +18,7 @@ Route::resource('/faq', 'FaqController')->only(['index']);
 Route::resource('/team', 'TeamController')->only(['index']);
 Route::resource('/news', 'NewsController')->only(['index', 'show']);
 Route::resource('/donate', 'DonationController')->only(['index'])->middleware(['auth']);
+Route::post('/donate/store', 'DonationController@store')->middleware(['auth']);
 Route::resource('/cases', 'CasesController')->only(['index', 'show']);
 Route::resource('/privacy-policy', 'PrivacyPolicyController')->only(['index']);
 

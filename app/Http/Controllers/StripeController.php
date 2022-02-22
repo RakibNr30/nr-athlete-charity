@@ -61,10 +61,15 @@ class StripeController extends Controller
                 }
             }
 
+            $donation = new \stdClass();
+            $donation->case = $case;
+            $donation->amount = $data['donate_amount'];
+
             // flash notification
             notifier()->success('Your donation is successful');
-            return redirect()->route('front.donate.index');
+            return redirect()->route('front.donate.index')->with(['data' => $donation]);
         }
+
 
         // flash notification
         notifier()->error('Your donation is not success due to technical issue');

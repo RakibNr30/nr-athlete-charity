@@ -7,9 +7,9 @@
     <main>
         @if(isset($data->banner))
             <div class="home slider-area-02 black-bg light-red-bg pos-rel">
-                <div class="slider-img__shape">
+                {{--<div class="slider-img__shape">
                     <img src="{{ asset('front/img/shape/05.png') }}" alt="">
-                </div>
+                </div>--}}
                 <div class="slider-actives">
                     <div class="single-slider slider-height-02 pos-rel d-flex align-items-center">
                         <div class="container">
@@ -303,26 +303,6 @@
             </div>
         </section>
         @endif
-
-        {{--<!--cta-area start-->
-        <section class="cta-area theme-bg2 pt-50 pb-50">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-xl-8 col-lg-8 col-md-8">
-                        <div class="cta-wrapper pl-100">
-                            <h2>Join With Our <a href="volunteer.html">Volunteer</a> Team</h2>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-4">
-                        <div class="cta-btn">
-                            <a class="theme_btn theme_btn_bg" href="#">Join Now <span><i
-                                            class="fas fa-check"></i></span></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--cta-area end-->--}}
     </main>
 @stop
 
